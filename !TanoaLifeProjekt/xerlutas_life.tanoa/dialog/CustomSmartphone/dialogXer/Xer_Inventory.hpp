@@ -68,7 +68,7 @@ class playerMenu {
 		};
 		class Inv_items: Life_RscListbox
 		{
-			idc = item_list;
+			idc = 1500;
 			x = 0.684409 * safezoneW + safezoneX;
             y = 0.397160 * safezoneH + safezoneY;
             w = 0.145833 * safezoneW;
