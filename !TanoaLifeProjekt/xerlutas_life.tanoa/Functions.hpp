@@ -209,6 +209,11 @@ class Life_Client_Core {
         class teleport {};
         class whereAmI {};
     };
+	
+	class XerlutasSmartphone {
+		 file = "dialog\CustomSmartphone\functions";
+		class  openLicensesMenu {};
+	};
 
     class Gangs {
         file = "core\gangs";
