@@ -12,6 +12,8 @@ disableSerialization;
 closeDialog 0;
 createDialog 'playerMenu';
 
+while(true){
+
 _inv = CONTROL(20057,1500);
 _plist = CONTROL(20057,2100);
 lbClear _plist;
@@ -35,3 +37,5 @@ _near_units = [];
 		_plist lbSetData [(lbSize _plist)-1,str(_x)];
 	};
 } forEach _near_units;
+
+};
