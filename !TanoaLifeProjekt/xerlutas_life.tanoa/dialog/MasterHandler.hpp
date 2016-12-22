@@ -30,3 +30,4 @@
 #include "newsStation.hpp"
 
 #include "CustomSmartphone\dialogXer\Xer_Licences.hpp"
+#include "CustomSmartphone\dialogXer\Xer_Inventory.hpp"

@@ -76,15 +76,11 @@ class playerSettings {
         {
             idc = 1101;
             text = "";
+			onButtonClick = "[]call life_fnc_openInvMenu;";
             x = 0.681532 * safezoneW + safezoneX;
             y = 0.408207 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
-            ColorBackground[] = {0,0,0,0.627450};
-            ColorText[] = {1,1,1,1};
-            font = TahomaB;
-            colorFocused[] = {0,0,0,1};
-            colorDisabled[] = {0,0,0,1};
         };
         class Button_keys: Life_RscButtonInvisible  //OK
         {
