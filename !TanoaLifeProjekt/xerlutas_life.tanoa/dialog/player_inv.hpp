@@ -4,7 +4,7 @@ class playerSettings {
     enableSimulation = 1;
 
     class controlsBackground {
-		class XerlutasSmartphone: RscPicture //OK
+		class XerlutasSmartphone: Life_RscPicture //OK
         {
             idc = 1100;
             text = "dialog\CustomSmartPhone\HandyHauptMenu.paa";
