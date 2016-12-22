@@ -9,9 +9,6 @@
 private["_lic","_side","_struct"];
 disableSerialization;
 
-closeDialog 0;
-createDialog 'Life_Xer_Licences';
-
 _side = switch(playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};};
 _lic = CONTROL(20058,1500);
 _struct = "";

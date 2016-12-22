@@ -43,7 +43,7 @@ class Life_Xer_Licences {
             y = 0.840492 * safezoneH + safezoneY;
             w = 0.154175 * safezoneW;
             h = 0.053272 * safezoneH;
-			action = "closeDialog 0; createDialog 'playerSettings'";
+			action = "closeDialog 0; createDialog 'smartphoneopen'";
 		};
 		
 	};

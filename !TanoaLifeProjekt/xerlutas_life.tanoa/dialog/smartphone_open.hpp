@@ -53,7 +53,7 @@ class smartphoneopen {
         {
             idc = 2014;
             text = "";
-            onButtonClick = "createDialog ""Life_cell_phone"";";
+            onButtonClick = "closeDialog 0; createDialog ""Life_cell_phone"";";
             x = 0.758616 * safezoneW + safezoneX;
             y = 0.764997 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -78,7 +78,7 @@ class smartphoneopen {
             idc = 1101;
             text = "";
 			//onButtonClick = "[]call life_fnc_openInvMenu;";
-			onButtonClick = "createDialog ""playerSettings"";disableSerialization;[] call life_fnc_p_updateMenu;";
+			onButtonClick = "closeDialog 0;createDialog ""playerSettings"";disableSerialization;[] call life_fnc_p_updateMenu;";
             x = 0.681532 * safezoneW + safezoneX;
             y = 0.408207 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -88,7 +88,7 @@ class smartphoneopen {
         {
             idc = 2013;
             text = "";
-            onButtonClick = "createDialog ""Life_key_management"";";
+            onButtonClick = "closeDialog 0;createDialog ""Life_key_management"";";
             x = 0.719727 * safezoneW + safezoneX;
             y = 0.408207 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -98,7 +98,7 @@ class smartphoneopen {
         {
             idc = 1108;
             text = "";
-			onButtonClick = "[] call life_fnc_openLicensesMenu;";
+			onButtonClick = "closeDialog 0;createDialog ""Life_Xer_Licences"";[] call life_fnc_openLicensesMenu;";
             x = 0.758616 * safezoneW + safezoneX;
             y = 0.409441 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -132,6 +132,7 @@ class smartphoneopen {
         {
             idc = 1111;
 			text = "";
+			onButtonClick = "hint ""marktsystem in Arbeit!"";";
             x = 0.721116 * safezoneW + safezoneX;
             y = 0.478577 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;

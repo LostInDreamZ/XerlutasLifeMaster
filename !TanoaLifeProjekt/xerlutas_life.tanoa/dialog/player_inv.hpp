@@ -1,7 +1,7 @@
 
 class playerSettings {
 
-	idd = playersys_DIALOG;
+	idd = 2001;
 	movingEnable = 1;
 	enableSimulation = 1;
 	
@@ -72,7 +72,7 @@ class playerSettings {
 		};
 		class Inv_items: Life_RscListbox
 		{
-			idc = item_list;
+			idc = 2005;
 			sizeEx = "0.02 * safeZoneH";
 			x = 0.684409 * safezoneW + safezoneX;
             y = 0.397160 * safezoneH + safezoneY;
@@ -81,7 +81,7 @@ class playerSettings {
 		};
 		class Inv_quantity: Life_RscEdit
 		{
-			idc = item_edit;
+			idc = 2010;
 			text = "1";
 			sizeEx = "0.02 * safeZoneH";
 			x = 0.685104 * safezoneW + safezoneX;

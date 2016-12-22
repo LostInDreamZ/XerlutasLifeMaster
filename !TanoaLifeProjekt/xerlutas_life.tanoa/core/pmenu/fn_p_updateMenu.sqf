@@ -16,17 +16,7 @@ _near = CONTROL(2001,2022);
 lbClear _inv;
 lbClear _near;
 
-//Near players
-_near_units = [];
-{ if (player distance _x < 10) then {_near_units pushBack _x};} forEach playableUnits;
-{
-    if (!isNull _x && alive _x && player distance _x < 10 && _x != player) then {
-        _near lbAdd format ["%1 - %2",_x getVariable ["realname",name _x], side _x];
-        _near lbSetData [(lbSize _near)-1,str(_x)];
-    };
-} forEach _near_units;
-
-ctrlSetText[2009,format ["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
+//ctrlSetText[2009,format ["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
 
 {
     if (ITEM_VALUE(configName _x) > 0) then {
@@ -38,3 +28,13 @@ ctrlSetText[2009,format ["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
         };
     };
 } forEach ("true" configClasses (missionConfigFile >> "VirtualItems"));
+
+//Near players
+_near_units = [];
+{ if (player distance _x < 10) then {_near_units pushBack _x};} forEach playableUnits;
+{
+    if (!isNull _x && alive _x && player distance _x < 10 && _x != player) then {
+        _near lbAdd format ["%1 - %2",_x getVariable ["realname",name _x], side _x];
+        _near lbSetData [(lbSize _near)-1,str(_x)];
+    };
+} forEach _near_units;
