@@ -25,25 +25,26 @@ class Life_Xer_Licences {
 			w = 0.6;
 			h = (1 / 25);
 		};
-		
-		class TR8_Licence_List: Life_RscStructuredText
+		class LicenceList: Life_RscStructuredText
 		{
 			idc = 1500;
 			background[] = {0,0,0,0};
-			x = 0.429615 * safezoneW + safezoneX;
-			y = 0.387848 * safezoneH + safezoneY;
-			w = 0.113859 * safezoneW;
-			h = 0.153934 * safezoneH;
+			x = 0.699478 * safezoneW + safezoneX;
+            y = 0.454876 * safezoneH + safezoneY;
+            w = 0.119444 * safezoneW;
+            h = 0.369135 * safezoneH;
 		};
-		class TR8_Close: Life_RscButtonInvisible
+		class ButtonClose: Life_RscButtonInvisible
 		{
 			idc = 1600;
-			x = 0.475158 * safezoneW + safezoneX;
-			y = 0.695716 * safezoneH + safezoneY;
-			w = 0.025877 * safezoneW;
-			h = 0.0329859 * safezoneH;
+			text = "";
+			x = 0.679335 * safezoneW + safezoneX;
+            y = 0.840492 * safezoneH + safezoneY;
+            w = 0.154175 * safezoneW;
+            h = 0.053272 * safezoneH;
 			action = "closeDialog 0; createDialog 'playerSettings'";
 		};
+		
 	};
 };
 ////////////////////////////////////////////////////////////////////////////
