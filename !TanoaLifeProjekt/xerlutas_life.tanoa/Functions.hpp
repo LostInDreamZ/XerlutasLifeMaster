@@ -209,15 +209,6 @@ class Life_Client_Core {
         class teleport {};
         class whereAmI {};
     };
-	
-	class XerlutasPhone
-	{
-		file = "dialog\CustomPhone\Functions";
-		class movesMenu {};
-		class openBankMenu {};
-		class openInvMenu {};
-		class openLicensesMenu {};
-	};
 
     class Gangs {
         file = "core\gangs";
