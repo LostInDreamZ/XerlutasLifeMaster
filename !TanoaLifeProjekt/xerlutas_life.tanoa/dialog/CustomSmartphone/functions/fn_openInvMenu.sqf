@@ -34,4 +34,4 @@ _near_units = [];
 		_plist lbAdd format["%1 - %2",_x getVariable["realname",name _x], side _x];
 		_plist lbSetData [(lbSize _plist)-1,str(_x)];
 	};
-} foreach _near_units;
+} forEach _near_units;

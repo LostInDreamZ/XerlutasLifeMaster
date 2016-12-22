@@ -48,7 +48,7 @@ class playerMenu {
             w = 0.145833 * safezoneW;
             h = 0.046296 * safezoneH;
 		};
-		class ButtonClose: Life_RscButtonMenu
+		class ButtonClose: Life_RscButtonInvisible
 		{
 			idc = 1604;
 			text = "";
@@ -68,7 +68,7 @@ class playerMenu {
 		};
 		class Inv_items: Life_RscListbox
 		{
-			idc = 1500;
+			idc = item_list;
 			x = 0.684409 * safezoneW + safezoneX;
             y = 0.397160 * safezoneH + safezoneY;
             w = 0.145833 * safezoneW;
