@@ -6,7 +6,7 @@
 	Description:
 	Updates the players licences menu!
 */
-private["_inv","_lic","_licenses","_near","_near_units","_mstatus","_shrt","_side","_struct"];
+private["_lic","_side","_struct"];
 disableSerialization;
 
 closeDialog 0;
@@ -25,7 +25,7 @@ _struct = "";
 } forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_side] configClasses (missionConfigFile >> "Licenses"));
 
 if (_struct isEqualTo "") then {
-    _struct = "No Licenses";
+    _struct = "Keine Lizenzen";
 };
 
 _lic ctrlSetStructuredText parseText format["

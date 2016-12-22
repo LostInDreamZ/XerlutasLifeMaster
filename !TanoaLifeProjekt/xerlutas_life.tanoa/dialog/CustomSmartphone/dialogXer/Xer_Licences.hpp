@@ -3,6 +3,7 @@ class Life_Xer_Licences {
     name = "Life_Xer_Licences";
     movingEnable = 0;
 	enableSimulation = 1;
+	onLoad = "[] spawn life_fnc_openLicensesMenu;";
 
     class controlsBackground {
 		class SmartphoneLicenses: Life_RscPicture

@@ -8,8 +8,8 @@
 */
 private "_item";
 disableSerialization;
-if ((lbCurSel 1500) isEqualTo -1) exitWith {hint localize "STR_ISTR_SelectItemFirst";};
-_item = CONTROL_DATA(1500);
+if ((lbCurSel 2005) isEqualTo -1) exitWith {hint localize "STR_ISTR_SelectItemFirst";};
+_item = CONTROL_DATA(2005);
 
 switch (true) do {
     case (_item in ["waterBottle","coffee","redgull"]): {

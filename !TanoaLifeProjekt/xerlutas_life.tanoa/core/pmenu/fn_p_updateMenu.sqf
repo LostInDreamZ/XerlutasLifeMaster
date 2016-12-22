@@ -9,21 +9,12 @@
 private ["_inv","_lic","_licenses","_near","_near_units","_mstatus","_shrt","_side","_struct"];
 disableSerialization;
 
-if (FETCH_CONST(life_adminlevel) < 1) then {
-    ctrlShow[2021,false];
-};
-
 _side = switch (playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};};
 
 _inv = CONTROL(2001,2005);
-_lic = CONTROL(2001,2014);
 _near = CONTROL(2001,2022);
-_near_i = CONTROL(2001,2023);
-_mstatus = CONTROL(2001,2015);
-_struct = "";
 lbClear _inv;
 lbClear _near;
-lbClear _near_i;
 
 //Near players
 _near_units = [];
@@ -32,12 +23,9 @@ _near_units = [];
     if (!isNull _x && alive _x && player distance _x < 10 && _x != player) then {
         _near lbAdd format ["%1 - %2",_x getVariable ["realname",name _x], side _x];
         _near lbSetData [(lbSize _near)-1,str(_x)];
-        _near_i lbAdd format ["%1 - %2",_x getVariable ["realname",name _x], side _x];
-        _near_i lbSetData [(lbSize _near)-1,str(_x)];
     };
 } forEach _near_units;
 
-_mstatus ctrlSetStructuredText parseText format ["<img size='1.3' image='icons\ico_bank.paa'/> <t size='0.8px'>$%1</t><br/><img size='1.2' image='icons\ico_money.paa'/> <t size='0.8'>$%2</t>",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
 ctrlSetText[2009,format ["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
 
 {
@@ -50,21 +38,3 @@ ctrlSetText[2009,format ["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
         };
     };
 } forEach ("true" configClasses (missionConfigFile >> "VirtualItems"));
-
-{
-    _displayName = getText(_x >> "displayName");
-
-    if (LICENSE_VALUE(configName _x,_side)) then {
-        _struct = _struct + format ["%1<br/>",localize _displayName];
-    };
-} forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_side] configClasses (missionConfigFile >> "Licenses"));
-
-if (_struct isEqualTo "") then {
-    _struct = "No Licenses";
-};
-
-_lic ctrlSetStructuredText parseText format ["
-<t size='0.8px'>
-%1
-</t>
-",_struct];

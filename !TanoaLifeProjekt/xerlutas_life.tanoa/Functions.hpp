@@ -317,6 +317,8 @@ class Life_Client_Core {
         class wantedInfo {};
         class wantedList {};
         class wantedMenu {};
+		//Smartphone
+		class p_openSmartPhone {};
     };
 
     class Shops {
