@@ -319,6 +319,7 @@ class Life_Client_Core {
         class wantedMenu {};
 		//Smartphone
 		class p_openSmartPhone {};
+		class SmartphoneBank {};
     };
 
     class Shops {

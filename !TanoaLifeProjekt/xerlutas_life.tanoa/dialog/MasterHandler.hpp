@@ -31,3 +31,4 @@
 
 #include "smartphone_open.hpp"
 #include "CustomSmartphone\dialogXer\Xer_Licences.hpp"
+#include "CustomSmartphone\dialogXer\Xer_Banking.hpp"

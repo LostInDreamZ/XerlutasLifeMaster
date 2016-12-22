@@ -63,6 +63,7 @@ class smartphoneopen {
         {
             idc = 1103;
 			text = "";
+			onButtonClick = "closeDialog 0; createDialog ""Life_Xer_Banking"";";
             x = 0.796116 * safezoneW + safezoneX;
             y = 0.764997 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
