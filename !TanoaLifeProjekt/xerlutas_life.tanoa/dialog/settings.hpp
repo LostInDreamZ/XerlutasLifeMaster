@@ -5,60 +5,51 @@ class SettingsMenu {
     enableSimulation = 1;
 
     class controlsBackground {
-        class RscTitleBackground: Life_RscText {
-            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+        class Xer_Background: RscPicture
+        {
             idc = -1;
-            x = 0.3;
-            y = 0.2;
-            w = 0.5;
-            h = (1 / 25);
-        };
-
-        class RscMainBackground: Life_RscText {
-            colorBackground[] = {0,0,0,0.7};
-            idc = -1;
-            x = 0.3;
-            y = 0.2 + (11 / 250);
-            w = 0.5;
-            h = 0.48 - (22 / 250);
-        };
-
-        class PlayerTagsHeader: Life_RscText {
-            idc = -1;
-            text = "$STR_SM_PlayerTags";
-            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-            x = 0.30;
-            y = 0.43;
-            w = 0.35;
-            h = (1 / 25);
+			text = "dialog\CustomSmartphone\HandyWechselMenu.paa";
+            x = 0.598954 * safezoneW + safezoneX;
+            y = 0.289352 * safezoneH + safezoneY;
+            w = 0.409382 * safezoneW;
+            h = 0.712529 * safezoneH;
         };
 
         class SideChatHeader : PlayerTagsHeader {
             idc = -1;
             text = "$STR_SM_SC";
-            y = 0.48;
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.724938 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class RevealNearestHeader : PlayerTagsHeader {
             idc = -1;
             text = "$STR_SM_RNObj";
-            y = 0.53;
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.763209 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class BroacastHeader : PlayerTagsHeader {
             idc = -1;
             text = "$STR_SM_BCSW";
-            y = 0.58;
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.800246 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class Title: Life_RscTitle {
             idc = -1;
             colorBackground[] = {0,0,0,0};
             text = "$STR_SM_Title";
-            x = 0.3;
-            y = 0.2;
-            w = 0.5;
-            h = (1 / 25);
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.395608 * safezoneH + safezoneY;
+            w = 0.083333 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
     };
 
@@ -66,28 +57,28 @@ class SettingsMenu {
         class VDonFoot: Life_RscText {
             idc = -1;
             text = "$STR_SM_onFoot";
-            x = 0.32;
-            y = 0.258;
-            w = 0.275;
-            h = 0.04;
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.429876 * safezoneH + safezoneY;
+            w = 0.093333 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class VDinCar: Life_RscText {
             idc = -1;
             text = "$STR_SM_inCar";
-            x = 0.32;
-            y = 0.305;
-            w = 0.275;
-            h = 0.04;
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.506419 * safezoneH + safezoneY;
+            w = 0.093333 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class VDinAir: Life_RscText {
             idc = -1;
             text = "$STR_SM_inAir";
-            x = 0.32;
-            y = 0.355;
-            w = 0.275;
-            h = 0.04;
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.579258 * safezoneH + safezoneY;
+            w = 0.093333 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class VD_onfoot_slider: life_RscXSliderH {
@@ -95,10 +86,10 @@ class SettingsMenu {
             text = "";
             onSliderPosChanged = "[0,_this select 1] call life_fnc_s_onSliderChange;";
             tooltip = "$STR_SM_ToolTip1";
-            x = 0.42;
-            y = 0.30 - (1 / 25);
-            w = "9 *(((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "1 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.469003 * safezoneH + safezoneY;
+            w = 0.093333 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class VD_onfoot_value: Life_RscEdit {
@@ -106,10 +97,10 @@ class SettingsMenu {
             text = "";
             onChar = "[_this select 0, _this select 1,'ground',false] call life_fnc_s_onChar;";
             onKeyUp = "[_this select 0, _this select 1,'ground',true] call life_fnc_s_onChar;";
-            x = .70;
-            y = .258;
-            w = .08;
-            h = .04;
+            x = 0.783715 * safezoneW + safezoneX;
+            y = 0.469003 * safezoneH + safezoneY;
+            w = 0.042361 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class VD_car_slider: life_RscXSliderH {
@@ -117,10 +108,10 @@ class SettingsMenu {
             text = "";
             onSliderPosChanged = "[1,_this select 1] call life_fnc_s_onSliderChange;";
             tooltip = "$STR_SM_ToolTip2";
-            x = 0.42;
-            y = 0.35 - (1 / 25);
-            w = "9 *(((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "1 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.543456 * safezoneH + safezoneY;
+            w = 0.093333 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class VD_car_value: Life_RscEdit {
@@ -128,10 +119,10 @@ class SettingsMenu {
             text = "";
             onChar = "[_this select 0, _this select 1,'vehicle',false] call life_fnc_s_onChar;";
             onKeyUp = "[_this select 0, _this select 1,'vehicle',true] call life_fnc_s_onChar;";
-            x = .70;
-            y = .31;
-            w = .08;
-            h = .04;
+            x = 0.783715 * safezoneW + safezoneX;
+            y = 0.543456 * safezoneH + safezoneY;
+            w = 0.042361 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class VD_air_slider: life_RscXSliderH {
@@ -139,10 +130,10 @@ class SettingsMenu {
             text = "";
             onSliderPosChanged = "[2,_this select 1] call life_fnc_s_onSliderChange;";
             tooltip = "$STR_SM_ToolTip3";
-            x = 0.42;
-            y = 0.40 - (1 / 25);
-            w = "9 *(((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "1 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.617530 * safezoneH + safezoneY;
+            w = 0.093333 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class VD_air_value: Life_RscEdit {
@@ -150,52 +141,51 @@ class SettingsMenu {
             text = "";
             onChar = "[_this select 0, _this select 1,'air',false] call life_fnc_s_onChar;";
             onKeyUp = "[_this select 0, _this select 1,'air',true] call life_fnc_s_onChar;";
-            x = 0.70;
-            y = 0.36;
-            w = .08;
-            h = .04;
-        };
-
-        class PlayerTagsONOFF: Life_Checkbox {
-            tooltip = "$STR_GUI_PlayTags";
-            idc = 2970;
-            sizeEx = 0.04;
-            onCheckedChanged = "['tags',_this select 1] call life_fnc_s_onCheckedChange;";
-            x = 0.65;
-            y = 0.43;
-
+            x = 0.783715 * safezoneW + safezoneX;
+            y = 0.61753 * safezoneH + safezoneY;
+            w = 0.042361 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
         class SideChatONOFF: PlayerTagsONOFF {
             idc = 2971;
             tooltip = "$STR_GUI_SideSwitch";
             onCheckedChanged = "['sidechat',_this select 1] call life_fnc_s_onCheckedChange;";
-            y = 0.48;
+            x = 0.809756 * safezoneW + safezoneX;
+            y = 0.7263 * safezoneH + safezoneY;
+            w = 0.104166 * safezoneW;
+            h = 0.037037 * safezoneH;
         };
 
         class RevealONOFF : PlayerTagsONOFF {
             idc = 2972;
             tooltip = "$STR_GUI_PlayerReveal";
             onCheckedChanged = "['objects',_this select 1] call life_fnc_s_onCheckedChange;";
-            y = 0.53;
+            x = 0.809756 * safezoneW + safezoneX;
+            y = 0.76527 * safezoneH + safezoneY;
+            w = 0.104166 * safezoneW;
+            h = 0.037037 * safezoneH;
         };
 
         class BroadcastONOFF : PlayerTagsONOFF {
             idc = 2973;
             tooltip = "$STR_GUI_BroadcastSwitch";
             onCheckedChanged = "['broadcast',_this select 1] call life_fnc_s_onCheckedChange;";
-            y = 0.58;
+            x = 0.809756 * safezoneW + safezoneX;
+            y = 0.802407 * safezoneH + safezoneY;
+            w = 0.104166 * safezoneW;
+            h = 0.037037 * safezoneH;
         };
 
-        class ButtonClose: Life_RscButtonMenu {
-            idc = -1;
-            //shortcuts[] = {0x00050000 + 2};
-            text = "$STR_Global_Close";
-            onButtonClick = "closeDialog 0;";
-            x = 0.48;
-            y = 0.68 - (1 / 25);
-            w = (6.25 / 40);
-            h = (1 / 25);
-        };
+        class ButtonClose: Life_RscButtonInvisible
+		{
+			idc = -1;
+			text = "";
+			onButtonClick = "closeDialog 0;";
+			x = 0.679335 * safezoneW + safezoneX;
+            y = 0.840492 * safezoneH + safezoneY;
+            w = 0.154175 * safezoneW;
+            h = 0.053272 * safezoneH;
+		};
     };
 };

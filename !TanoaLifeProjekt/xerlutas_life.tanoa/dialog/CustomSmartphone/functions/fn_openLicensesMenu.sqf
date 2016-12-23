@@ -7,6 +7,7 @@
 	Updates the players licences menu!
 */
 private["_lic","_side","_struct"];
+disableSerialization;
 
 _side = switch(playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};};
 _lic = CONTROL(20058,1500);
