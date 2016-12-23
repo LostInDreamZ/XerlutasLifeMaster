@@ -39,11 +39,11 @@ class Life_Xer_Licences {
 		{
 			idc = 1600;
 			text = "";
+			onButtonClick = "closeDialog 0;";
 			x = 0.679335 * safezoneW + safezoneX;
             y = 0.840492 * safezoneH + safezoneY;
             w = 0.154175 * safezoneW;
             h = 0.053272 * safezoneH;
-			action = "closeDialog 0; createDialog 'smartphoneopen'";
 		};
 		
 	};

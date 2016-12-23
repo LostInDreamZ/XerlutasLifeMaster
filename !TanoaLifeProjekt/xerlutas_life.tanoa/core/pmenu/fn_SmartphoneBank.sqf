@@ -3,11 +3,10 @@
 	File: fn_SmartphoneBank.sqf
 	Author: LostInDreamz
 */
-private["_near","_near_units","_ms","_msBank","_msCash","_total"];
+private["_near","_near_units","_msBank","_msCash","_total"];
 disableSerialization;
 
 _near = CONTROL(7124,2022);
-_ms = CONTROL(7124,2015);
 _msBank = CONTROL(7124,2016);
 _msCash = CONTROL(7124,2017);
 lbClear _near;
@@ -22,7 +21,5 @@ _near_units = [];
     };
 } forEach _near_units;
 
-_total = BANK + CASH;
-_mstatus ctrlSetStructuredText parseText format["<t color='#5A5A5A' align='center' size='1px'>$ %1",[_total] call life_fnc_numberText];
-_mstatusBank ctrlSetStructuredText parseText format["<t color='#5A5A5A' size='1px'>$ %1",[BANK] call life_fnc_numberText];
-_mstatusCash ctrlSetStructuredText parseText format["<t color='#5A5A5A' size='1px'>$ %1",[CASH] call life_fnc_numberText];
+_msBank ctrlSetStructuredText parseText format["<t color='#5A5A5A' size='1px'>$ %1",[CASH] call life_fnc_numberText];
+_msCash ctrlSetStructuredText parseText format["<t color='#5A5A5A' size='1px'>$ %1",[BANK] call life_fnc_numberText];

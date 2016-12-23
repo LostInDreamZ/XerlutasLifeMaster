@@ -53,7 +53,7 @@ class smartphoneopen {
         {
             idc = 2014;
             text = "";
-            onButtonClick = "closeDialog 0; createDialog ""Life_cell_phone"";";
+            onButtonClick = "createDialog ""Life_cell_phone"";";
             x = 0.758616 * safezoneW + safezoneX;
             y = 0.764997 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -63,7 +63,7 @@ class smartphoneopen {
         {
             idc = 1103;
 			text = "";
-			onButtonClick = "closeDialog 0; createDialog ""Life_Xer_Banking"";";
+			onButtonClick = "createDialog ""Life_Xer_Banking"";";
             x = 0.796116 * safezoneW + safezoneX;
             y = 0.764997 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -79,7 +79,7 @@ class smartphoneopen {
             idc = 1101;
             text = "";
 			//onButtonClick = "[]call life_fnc_openInvMenu;";
-			onButtonClick = "closeDialog 0;createDialog ""playerSettings"";disableSerialization;[] call life_fnc_p_updateMenu;";
+			onButtonClick = "createDialog ""playerSettings"";disableSerialization;[] call life_fnc_p_updateMenu;";
             x = 0.681532 * safezoneW + safezoneX;
             y = 0.408207 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -89,7 +89,7 @@ class smartphoneopen {
         {
             idc = 2013;
             text = "";
-            onButtonClick = "closeDialog 0;createDialog ""Life_key_management"";";
+            onButtonClick = "createDialog ""Life_key_management"";";
             x = 0.719727 * safezoneW + safezoneX;
             y = 0.408207 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -99,7 +99,7 @@ class smartphoneopen {
         {
             idc = 1108;
             text = "";
-			onButtonClick = "closeDialog 0;createDialog ""Life_Xer_Licences"";[] call life_fnc_openLicensesMenu;";
+			onButtonClick = "createDialog ""Life_Xer_Licences"";disableSerialization;[] call life_fnc_openLicensesMenu;";
             x = 0.758616 * safezoneW + safezoneX;
             y = 0.409441 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -133,7 +133,7 @@ class smartphoneopen {
         {
             idc = 1111;
 			text = "";
-			onButtonClick = "hint ""marktsystem in Arbeit!"";";
+			onButtonClick = "hint ""Marktsystem in Arbeit!"";";
             x = 0.721116 * safezoneW + safezoneX;
             y = 0.478577 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -158,7 +158,7 @@ class smartphoneopen {
         {
 			idc = 2021;
             text = "";
-            onButtonClick = "closeDialog 0; createDialog ""life_admin_menu"";";
+            onButtonClick = "createDialog ""life_admin_menu"";";
             x = 0.682227 * safezoneW + safezoneX;
             y = 0.678577 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;

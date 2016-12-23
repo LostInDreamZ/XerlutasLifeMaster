@@ -18,9 +18,9 @@ class Life_Xer_Banking {
         };
 		
 		class moneyInfo : Life_RscStructuredText {
-			idc = 2015;
+			idc = -1;
 			size = "0.022 * safeZoneH";
-			text = "";
+			text = "$STR_PM_MoneyStats";
 			x = 0.684375 * safezoneW + safezoneX;
             y = 0.396543 * safezoneH + safezoneY;
             w = 0.145833 * safezoneW;
@@ -32,6 +32,7 @@ class Life_Xer_Banking {
 			idc = 2016;
 			size = "0.022 * safeZoneH";
 			text = "";
+			tooltip = "Bankkonto";
 			x = 0.684375 * safezoneW + safezoneX;
             y = 0.496543 * safezoneH + safezoneY;
             w = 0.145833 * safezoneW;
@@ -43,6 +44,7 @@ class Life_Xer_Banking {
 			idc = 2017;
 			size = "0.022 * safeZoneH";
 			text = "";
+			tooltip = "Bargeld";
 			x = 0.684375 * safezoneW + safezoneX;
             y = 0.553333 * safezoneH + safezoneY;
             w = 0.145833 * safezoneW;
@@ -74,26 +76,27 @@ class Life_Xer_Banking {
 			colorBackground[] = {0,0,0,0};
 		};
 		
-		class moneyDrop : Life_RscButtonInvisible {
+		class moneyDrop : Life_RscButtonMenu {
 			idc = -1;
+			text = "Geben";
 			onButtonClick = "[] call life_fnc_giveMoney";
 			size = "0.022 * safeZoneH";
 			x = 0.684375 * safezoneW + safezoneX;
             y = 0.786666 * safezoneH + safezoneY;
             w = 0.145833 * safezoneW;
             h = 0.046296 * safezoneH;
-			tooltip = "TRANSFER";
+			tooltip = "Geld Übergeben";
 		};
 		
 		class ButtonClose: Life_RscButtonInvisible
 		{
 			idc = 1600;
 			text = "";
+			onButtonClick = "closeDialog 0;";
 			x = 0.679335 * safezoneW + safezoneX;
             y = 0.840492 * safezoneH + safezoneY;
             w = 0.154175 * safezoneW;
             h = 0.053272 * safezoneH;
-			action = "closeDialog 0; createDialog 'smartphoneopen'";
 		};
 	};
 };
