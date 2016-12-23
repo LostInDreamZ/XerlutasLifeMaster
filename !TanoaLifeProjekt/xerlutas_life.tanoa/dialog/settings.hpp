@@ -5,7 +5,7 @@ class SettingsMenu {
     enableSimulation = 1;
 
     class controlsBackground {
-        class Xer_Background: RscPicture
+        class Xer_Background: Life_RscPicture
         {
             idc = -1;
 			text = "dialog\CustomSmartphone\HandyWechselMenu.paa";
