@@ -14,28 +14,31 @@ class SettingsMenu {
             w = 0.409382 * safezoneW;
             h = 0.712529 * safezoneH;
         };
-
-        class SideChatHeader : PlayerTagsHeader {
+		
+        class SideChatHeader : Life_RscText {
             idc = -1;
             text = "$STR_SM_SC";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.683367 * safezoneW + safezoneX;
             y = 0.724938 * safezoneH + safezoneY;
             w = 0.144444 * safezoneW;
             h = 0.031481 * safezoneH;
         };
 
-        class RevealNearestHeader : PlayerTagsHeader {
+        class RevealNearestHeader : Life_RscText {
             idc = -1;
             text = "$STR_SM_RNObj";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.683367 * safezoneW + safezoneX;
             y = 0.763209 * safezoneH + safezoneY;
             w = 0.144444 * safezoneW;
             h = 0.031481 * safezoneH;
         };
 
-        class BroacastHeader : PlayerTagsHeader {
+        class BroacastHeader : Life_RscText {
             idc = -1;
             text = "$STR_SM_BCSW";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.683367 * safezoneW + safezoneX;
             y = 0.800246 * safezoneH + safezoneY;
             w = 0.144444 * safezoneW;
@@ -147,7 +150,7 @@ class SettingsMenu {
             h = 0.031481 * safezoneH;
         };
 
-        class SideChatONOFF: PlayerTagsONOFF {
+        class SideChatONOFF: Life_Checkbox {
             idc = 2971;
             tooltip = "$STR_GUI_SideSwitch";
             onCheckedChanged = "['sidechat',_this select 1] call life_fnc_s_onCheckedChange;";
@@ -157,7 +160,7 @@ class SettingsMenu {
             h = 0.037037 * safezoneH;
         };
 
-        class RevealONOFF : PlayerTagsONOFF {
+        class RevealONOFF : Life_Checkbox {
             idc = 2972;
             tooltip = "$STR_GUI_PlayerReveal";
             onCheckedChanged = "['objects',_this select 1] call life_fnc_s_onCheckedChange;";
@@ -167,7 +170,7 @@ class SettingsMenu {
             h = 0.037037 * safezoneH;
         };
 
-        class BroadcastONOFF : PlayerTagsONOFF {
+        class BroadcastONOFF : Life_Checkbox {
             idc = 2973;
             tooltip = "$STR_GUI_BroadcastSwitch";
             onCheckedChanged = "['broadcast',_this select 1] call life_fnc_s_onCheckedChange;";
