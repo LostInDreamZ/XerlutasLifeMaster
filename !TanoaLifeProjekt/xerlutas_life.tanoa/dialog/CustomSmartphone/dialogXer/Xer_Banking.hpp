@@ -28,25 +28,25 @@ class Life_Xer_Banking {
 			colorBackground[] = {0,0,0,0};
 		};
 		
-		class moneyBank : Life_RscStructuredText {
-			idc = 2016;
-			size = "0.022 * safeZoneH";
-			text = "";
-			tooltip = "Bankkonto";
-			x = 0.684375 * safezoneW + safezoneX;
-            y = 0.496543 * safezoneH + safezoneY;
-            w = 0.145833 * safezoneW;
-            h = 0.046296 * safezoneH;
-			colorBackground[] = {0,0,0,0};
-		};
-		
 		class moneyCash : Life_RscStructuredText {
-			idc = 2017;
+			idc = 2016;
 			size = "0.022 * safeZoneH";
 			text = "";
 			tooltip = "Bargeld";
 			x = 0.684375 * safezoneW + safezoneX;
             y = 0.553333 * safezoneH + safezoneY;
+            w = 0.145833 * safezoneW;
+            h = 0.046296 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+		};
+		
+		class moneyBank : Life_RscStructuredText {
+			idc = 2017;
+			size = "0.022 * safeZoneH";
+			text = "";
+			tooltip = "Bankkonto";
+			x = 0.684375 * safezoneW + safezoneX;               
+            y = 0.496543 * safezoneH + safezoneY;
             w = 0.145833 * safezoneW;
             h = 0.046296 * safezoneH;
 			colorBackground[] = {0,0,0,0};

@@ -156,8 +156,6 @@ class SettingsMenu {
             onCheckedChanged = "['sidechat',_this select 1] call life_fnc_s_onCheckedChange;";
             x = 0.809756 * safezoneW + safezoneX;
             y = 0.7263 * safezoneH + safezoneY;
-            w = 0.104166 * safezoneW;
-            h = 0.037037 * safezoneH;
         };
 
         class RevealONOFF : Life_Checkbox {
@@ -166,8 +164,6 @@ class SettingsMenu {
             onCheckedChanged = "['objects',_this select 1] call life_fnc_s_onCheckedChange;";
             x = 0.809756 * safezoneW + safezoneX;
             y = 0.76527 * safezoneH + safezoneY;
-            w = 0.104166 * safezoneW;
-            h = 0.037037 * safezoneH;
         };
 
         class BroadcastONOFF : Life_Checkbox {
@@ -176,8 +172,6 @@ class SettingsMenu {
             onCheckedChanged = "['broadcast',_this select 1] call life_fnc_s_onCheckedChange;";
             x = 0.809756 * safezoneW + safezoneX;
             y = 0.802407 * safezoneH + safezoneY;
-            w = 0.104166 * safezoneW;
-            h = 0.037037 * safezoneH;
         };
 
         class ButtonClose: Life_RscButtonInvisible
