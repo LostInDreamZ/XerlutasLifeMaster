@@ -38,7 +38,7 @@ class Life_Xer_Banking {
             ColorText[] = {1,1,1,1};
         };
 		
-		class IconBank: RscPicture
+		class IconBank: Life_RscPicture
         {
             idc = -1;
             text = "";
@@ -49,7 +49,7 @@ class Life_Xer_Banking {
             h = 0.064814 * safezoneH;
         };
 		
-		class IconCash: RscPicture
+		class IconCash: Life_RscPicture
         {
             idc = -1;
             text = "";
