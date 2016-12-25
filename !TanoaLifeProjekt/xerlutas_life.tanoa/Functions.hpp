@@ -372,4 +372,14 @@ class Life_Client_Core {
         class vehTakeItem {};
         class vInteractionMenu {};
     };
+	
+	class MSG_SYSTEM {
+		tag = "MSG";
+		
+			class Master {
+				file = "derleon\msg";
+				class ctrl {};
+				class handle {};
+			};
+	};
 };
