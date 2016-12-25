@@ -54,7 +54,7 @@ class smartphoneopen {
             idc = 2014;
             text = "";
             //onButtonClick = "createDialog ""Life_cell_phone"";";
-			onButtonClick = createDialog ""Life_my_smartphone"";
+			onButtonClick = "createDialog ""Life_my_smartphone"";";
             x = 0.758616 * safezoneW + safezoneX;
             y = 0.764997 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;

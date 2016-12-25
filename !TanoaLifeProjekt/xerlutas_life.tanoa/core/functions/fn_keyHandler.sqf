@@ -352,7 +352,7 @@ switch (_code) do {
                             _veh animateDoor ['DoorL_Back_Open',0];
                             _veh animateDoor ['DoorR_Back_Open ',0];
                         };
-						hint composeText [image "icons\lock.paa",localize "STR_MISC_VehLock";];
+						hint composeText [image "icons\lock.paa",localize "STR_MISC_VehLock"];
                         [_veh,"lockCarSound"] remoteExec ["life_fnc_say3D",RANY];
                     };
                 };
