@@ -2542,6 +2542,9 @@
       <Italian>Hai perso il tuo Porto d'Armi a causa di un omicidio</Italian>
       <Polish>Straciłeś pozwolenie na broń z uwagi na zabijanie ludzi z broni palnej</Polish>
     </Key>
+	<Key ID="STR_Civ_Plane">
+      <Original>Zivilisten Flugzeug</Original>
+    </Key>
     <Key ID="STR_Civ_RobFail">
       <Original>They didn't have any cash...</Original>
       <German>Er hatte kein Geld...</German>
@@ -4628,6 +4631,28 @@
       <Polish>Zbieranie kokainy</Polish>
     </Key>
   </Package>
+  <Package name="Rebel_Strings">
+	<Key ID="STR_Rebel_Car">
+	<Original>Rebellen Fahrzeug</Original>
+	</Key>
+	<Key ID="STR_Rebel_Heli">
+	<Original>Rebellen Helikopter</Original>
+	</Key>
+  </Package>
+  <Package name="Police_Strings">
+	<Key ID="STR_Police_Car">
+	<Original>Polizeiauto</Original>
+	</Key>
+	<Key ID="STR_Police_Heli">
+	<Original>Polizeihelikopter</Original>
+	</Key>
+	<Key ID="STR_Police_Store">
+	<Original>Polizei-Store</Original>
+	</Key>
+	<Key ID="STR_Police_Boat">
+	<Original>Polizeiboot</Original>
+	</Key>
+  </Package>
   <Package name="Medical_Strings">
     <Key ID="STR_Medic_Online">
       <Original>Medics Online: %1</Original>
@@ -5739,6 +5764,13 @@
       <German>Altis Bundesgefängnis</German>
       <Portuguese>Prisão de Altis</Portuguese>
       <Polish>Więzienie Altis</Polish>
+    </Key>
+	<Key ID="STR_MAR_Tanoa_Corrections">
+      <Original>Tanoa Corrections</Original>
+      <German>Tanoa Bundesgefängnis</German>
+    </Key>
+	<Key ID="STR_MAR_FuelTank_Storage">
+      <Original>Fahrzeugtank</Original>
     </Key>
     <Key ID="STR_MAR_Police_HQ">
       <Original>Police HQ</Original>
