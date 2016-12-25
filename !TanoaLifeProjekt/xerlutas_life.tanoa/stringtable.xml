@@ -4935,6 +4935,17 @@
       <Portuguese>Vender Garagem</Portuguese>
       <Polish>Sprzedaj garaż</Polish>
     </Key>
+	<Key ID="STR_InsuranceApply"> 
+		<Original>You just insure your vehicle you are now protected against explosions!</Original> 
+		<Czech>Právě jste pojistit své vozidlo se nyní chráněna proti výbuchu!</Czech> 
+		<Spanish>Usted acaba de asegurar su vehículo que ahora está protegido contra explosiones!</Spanish> 
+		<Italian>Basta assicurare il vostro veicolo si sono ora protetti contro le esplosioni!</Italian> 
+		<Polish>Po prostu ubezpieczyć swój pojazd jesteś teraz zabezpieczona przed wybuchem!</Polish> 
+		<Russian>Вы просто застраховать свой автомобиль, вы теперь защищены от взрывов!</Russian> 
+		<French>Vous venez d'assurer votre véhicule vous êtes maintenant protégé contre les explosions!</French> 
+		<Portuguese>Você só segurar o seu veículo que você está actualmente protegida contra explosões!</Portuguese> 
+		<German>Ihr Fahrzeug ist nun Versichert!</German> 
+ </Key>
     <Key ID="STR_pInAct_RemoveContainer">
       <Original>Remove Container</Original>
       <French>Supprimer le container</French>

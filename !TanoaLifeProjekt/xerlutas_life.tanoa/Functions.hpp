@@ -169,6 +169,7 @@ class Life_Client_Core {
         class unimpound {};
         class vehicleGarage {};
         class wireTransfer {};
+		class insureCar {}; //Fahrzeug Versicherung
     };
 
     class Functions {

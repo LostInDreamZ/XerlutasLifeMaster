@@ -116,6 +116,7 @@ class CfgRemoteExec {
 		F(life_fnc_update,CLIENT) //DynMarket
 		F(TON_fnc_handleMessages,SERVER)//SQL Phone
 		F(TON_fnc_msgRequest,SERVER)//SQL Phone
+		F(TON_fnc_insureCar,SERVER) //Fahrzeug Versicherung
 
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)
@@ -150,6 +151,7 @@ class CfgRemoteExec {
         F(HC_fnc_wantedFetch,HC)
         F(HC_fnc_wantedProfUpdate,HC)
         F(HC_fnc_wantedRemove,HC)
+		F(HC_fnc_insureCar,HC) //Fahrzeug Versicherung
 
         /* Functions for everyone */
         F(BIS_fnc_effectKilledAirDestruction,ANYONE)
@@ -167,6 +169,8 @@ class CfgRemoteExec {
         F(life_fnc_setFuel,ANYONE)
         F(life_fnc_simDisable,ANYONE)
         F(SPY_fnc_notifyAdmins,ANYONE)
+		F(stig_sz_msg_add,ANYONE) //Sperrzonen Cops
+		F(stig_sz_msg_del,ANYONE) //Sperrzonen Cops
     };
 
     class Commands {
