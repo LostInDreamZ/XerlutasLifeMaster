@@ -6,95 +6,101 @@ class life_dynmarket_prices {
 	onLoad = "[] spawn {sleep 1;[] call life_fnc_LoadIntoListbox;};";
 	
 	class controlsBackground {
+		class Xer_Background: Life_RscPicture
+        {
+            idc = -1;
+			text = "dialog\CustomSmartphone\HandyWechselMenu.paa";
+            x = 0.598954 * safezoneW + safezoneX;
+            y = 0.289352 * safezoneH + safezoneY;
+            w = 0.409382 * safezoneW;
+            h = 0.712529 * safezoneH;
+        };
+		
+		class Title: Life_RscTitle {
+            idc = -1;
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+            text = "Börse";
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.395308 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.031481 * safezoneH;
+        };
 	};
 	
 	class controls {
-class RscFrame_1800: Life_RscText
-{
-	idc = -1;
-
-	x = 0.276563 * safezoneW + safezoneX;
-	y = 0.390043 * safezoneH + safezoneY;
-	w = 0.446875 * safezoneW;
-	h = 0.219914 * safezoneH;
-	colorBackground[] = {0,0,0,1};
-};
 class RscListbox_1500: Life_RscListBox
 {
 	idc = 7055;
 	onLBSelChanged = "[] spawn {[] call life_fnc_DisplayPrices;};";
 
-	x = 0.282292 * safezoneW + safezoneX;
-	y = 0.398839 * safezoneH + safezoneY;
-	w = 0.211979 * safezoneW;
-	h = 0.202321 * safezoneH;
+	x = 0.685312 * safezoneW + safezoneX;
+	y = 0.626928 * safezoneH + safezoneY;
+	w = 0.144305 * safezoneW;
+	h = 0.207252 * safezoneH;
 	sizeEx = 0.0260;
 };
 class RscText_1000: Life_RscText
 {
 	idc = -1;
 
-	text = "Current Sell Price"; //--- ToDo: Localize;
-	x = 0.5 * safezoneW + safezoneX;
-	y = 0.401039 * safezoneH + safezoneY;
-	w = 0.217708 * safezoneW;
-	h = 0.0219914 * safezoneH;
+	text = "Momentaner Verkaufspreis:"; //--- ToDo: Localize;
+	x = 0.685069 * safezoneW + safezoneX;
+	y = 0.428394 * safezoneH + safezoneY;
+	w = 0.145312 * safezoneW;
+	h = 0.031481 * safezoneH;
 };
 class RscText_1001: Life_RscText
 {
 	idc = 7056;
 
-	text = "Please select an Item"; //--- ToDo: Localize;
-	x = 0.5 * safezoneW + safezoneX;
-	y = 0.420831 * safezoneH + safezoneY;
-	w = 0.20625 * safezoneW;
-	h = 0.0549786 * safezoneH;
+	text = "Bitte wähle ein Item aus!"; //--- ToDo: Localize;
+	x = 0.685069 * safezoneW + safezoneX;
+	y = 0.462962 * safezoneH + safezoneY;
+	w = 0.145312* safezoneW;
+	h = 0.031481 * safezoneH;
 	sizeEx = 0.060;
 };
 class RscText_1002: Life_RscText
 {
 	idc = -1;
 
-	text = "Amout of Items sold by You"; //--- ToDo: Localize;
-	x = 0.5 * safezoneW + safezoneX;
-	y = 0.5 * safezoneH + safezoneY;
-	w = 0.217708 * safezoneW;
-	h = 0.0219914 * safezoneH;
+	text = "Von dir Verkaufte Items:"; //--- ToDo: Localize;
+	x = 0.685069 * safezoneW + safezoneX;
+	y = 0.544444 * safezoneH + safezoneY;
+	w = 0.146527 * safezoneW;
+	h = 0.031481 * safezoneH;
 };
 class RscText_1003: Life_RscText
 {
 	idc = 7057;
 
-	text = "2345"; //--- ToDo: Localize;
-	x = 0.5 * safezoneW + safezoneX;
-	y = 0.513195 * safezoneH + safezoneY;
-	w = 0.20625 * safezoneW;
-	h = 0.0549786 * safezoneH;
+	text = ""; //--- ToDo: Localize;
+	x = 0.685069 * safezoneW + safezoneX;
+	y = 0.583950 * safezoneH + safezoneY;
+	w = 0.146527 * safezoneW;
+	h = 0.031481 * safezoneH;
 	sizeEx = 0.060;
 };
-class RscButtonMenu_2400: Life_RscButtonMenu
+class RscButtonMenu_2400: Life_RscButtonInvisible
 {
 	onButtonClick = "closeDialog 0;";
 
 	idc = 1006;
-	text = "OKAY"; //--- ToDo: Localize;
-	x = 0.5 * safezoneW + safezoneX;
-	y = 0.57697 * safezoneH + safezoneY;
-	w = 0.217708 * safezoneW;
-	h = 0.0219914 * safezoneH;
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0.52,0.03,1};
+	text = ""; //--- ToDo: Localize;
+	x = 0.679335 * safezoneW + safezoneX;
+    y = 0.840492 * safezoneH + safezoneY;
+    w = 0.154175 * safezoneW;
+    h = 0.053272 * safezoneH;
 };
 class RscText_1007: Life_RscStructuredText
 {
 	idc = 7058;
 
 	text = ""; //--- ToDo: Localize;
-	x = 0.5 * safezoneW + safezoneX;
-	//y = 0.447221 * safezoneH + safezoneY;
-	y = 0.460221 * safezoneH + safezoneY;
-	w = 0.20625 * safezoneW;
-	h = 0.0549786 * safezoneH;
+	x = 0.685069 * safezoneW + safezoneX;
+	y = 0.498456 * safezoneH + safezoneY;
+	w = 0.145833 * safezoneW;
+	h = 0.031481 * safezoneH;
 	colorText[] = {0.33,0.33,0.33,1};
 };
 };
