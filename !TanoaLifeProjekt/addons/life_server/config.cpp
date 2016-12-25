@@ -88,6 +88,12 @@ class CfgFunctions {
 			class playerLogged {};
 			class sleeper {}; 
 		};
+		
+		class Smartphone {
+			file = "\life_server\Functions\Smartphone";
+			class handleMessages {};
+			class msgRequest {};
+		};
 
         class Housing {
             file = "\life_server\Functions\Housing";

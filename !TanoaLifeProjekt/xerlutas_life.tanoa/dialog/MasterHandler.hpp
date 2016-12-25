@@ -34,6 +34,10 @@
 #include "CustomSmartphone\dialogXer\Xer_Banking.hpp"
 #include "CustomSmartphone\dialogXer\Xer_Animation.hpp"
 
+//SQL Handy
+#include "smartphone.hpp"
+
 //DynMarket
 #include "dynmarket_changeprice.hpp"
 #include "dynmarket_prices.hpp"
+

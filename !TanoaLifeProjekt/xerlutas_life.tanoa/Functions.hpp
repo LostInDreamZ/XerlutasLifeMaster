@@ -332,6 +332,10 @@ class Life_Client_Core {
 		//Smartphone
 		class p_openSmartPhone {};
 		class SmartphoneBank {};
+		//SQL Handy
+		class smartphone {};
+		class newMsg {};
+		class showMsg {};
     };
 
     class Shops {

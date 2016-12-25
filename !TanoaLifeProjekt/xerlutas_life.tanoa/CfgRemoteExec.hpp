@@ -114,6 +114,8 @@ class CfgRemoteExec {
 		F(TON_fnc_getUpdate,SERVER) //DynMarket
 		F(TON_fnc_changePrice, SERVER) //DynMarket
 		F(life_fnc_update,CLIENT) //DynMarket
+		F(TON_fnc_handleMessages,SERVER)//SQL Phone
+		F(TON_fnc_msgRequest,SERVER)//SQL Phone
 
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)

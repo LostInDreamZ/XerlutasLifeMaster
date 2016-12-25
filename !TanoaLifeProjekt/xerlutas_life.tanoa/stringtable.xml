@@ -6462,4 +6462,36 @@
       <French>Meurtre d'un militaire</French>
     </Key>
 	</Package>
+  <Package name="Smartphone">
+	<Key ID="STR_PM_Smartphone">
+		<Original>Smartphone</Original>
+	</Key>
+	<Key ID="STR_SMARTPHONE_TITLE">
+		<Original>Smartphone Menü</Original>
+	</Key>
+	<Key ID="STR_SMARTPHONE_PLAYERLISTTITLE">
+		<Original>Kontakte</Original>
+	</Key>
+	<Key ID="STR_SMARTPHONE_MESSAGETITLE">
+		<Original>Neue Nachricht</Original>
+	</Key>
+	<Key ID="STR_SMARTPHONE_RANDOMTITLE">
+		<Original>Wähle eine Nachricht zum lesen aus!</Original>
+	</Key>
+	<Key ID="STR_SMARTPHONE_SCHREIBEN">
+		<Original>Schreibe</Original>
+	</Key>
+	<Key ID="STR_SMARTPHONE_NOTRUF">
+		<Original>Notruf</Original>
+	</Key>
+	<Key ID="STR_SMARTPHONE_Absenden">
+		<Original>Senden</Original>
+	</Key>
+	<Key ID="STR_SMARTPHONE_NACHRICHTTITLE">
+		<Original>Nachricht:</Original>
+	</Key>
+	<Key ID="STR_SMARTPHONE_Notruftitle">
+		<Original>Nutruf absetzten</Original>
+	</Key>
+  </Package>
 </Project>
