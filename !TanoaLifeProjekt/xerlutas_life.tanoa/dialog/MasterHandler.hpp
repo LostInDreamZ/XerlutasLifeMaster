@@ -33,3 +33,7 @@
 #include "CustomSmartphone\dialogXer\Xer_Licences.hpp"
 #include "CustomSmartphone\dialogXer\Xer_Banking.hpp"
 #include "CustomSmartphone\dialogXer\Xer_Animation.hpp"
+
+//DynMarket
+#include "dynmarket_changeprice.hpp"
+#include "dynmarket_prices.hpp"
