@@ -212,8 +212,9 @@ class Life_Client_Core {
 	
 	class XerlutasSmartphone {
 		 file = "dialog\CustomSmartphone\functions";
-		class  openLicensesMenu {};
+		class openLicensesMenu {};
 		class openInvMenu {};
+		class movesMenu {};
 	};
 
     class Gangs {

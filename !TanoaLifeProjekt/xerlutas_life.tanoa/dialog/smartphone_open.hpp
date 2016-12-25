@@ -18,7 +18,7 @@ class smartphoneopen {
         };
     };
     class controls {
-        class ButtonClose: Life_RscButtonInvisible  //OK
+        class ButtonClose: Life_RscButtonInvisible  //Completed
         {
             idc = -1;
 			text = "";
@@ -28,7 +28,7 @@ class smartphoneopen {
             w = 0.154175 * safezoneW;
             h = 0.053272 * safezoneH;
         };
-        class ButtonSettings: Life_RscButtonInvisible  //OK
+        class ButtonSettings: Life_RscButtonInvisible  //Completed
         {
             idc = -1;
 			text = "";
@@ -38,7 +38,7 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_Sync: Life_RscButtonInvisible  //OK
+        class Button_Sync: Life_RscButtonInvisible  //Completed
         {
             idc = -1;
 			text = "";
@@ -49,7 +49,7 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_SMS: Life_RscButtonInvisible  //OK
+        class Button_SMS: Life_RscButtonInvisible  //OK -> SQL Smartphoen folgt...
         {
             idc = 2014;
             text = "";
@@ -59,7 +59,7 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_Cash: Life_RscButtonInvisible  //Implementierung folgt!
+        class Button_Cash: Life_RscButtonInvisible  //In Bearbeitung... Icons fehlen!
         {
             idc = 1103;
 			text = "";
@@ -74,7 +74,7 @@ class smartphoneopen {
             colorFocused[] = {0,0,0,1};
             colorDisabled[] = {0,0,0,1};
         };
-        class Button_Inv: Life_RscButtonInvisible  //Implementierung folgt!
+        class Button_Inv: Life_RscButtonInvisible  //In Bearbeitung...
         {
             idc = 1101;
             text = "";
@@ -85,7 +85,7 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_keys: Life_RscButtonInvisible  //OK
+        class Button_keys: Life_RscButtonInvisible  //Completed
         {
             idc = 2013;
             text = "";
@@ -95,7 +95,7 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_license: Life_RscButtonInvisible  //Implementierung folgt!
+        class Button_license: Life_RscButtonInvisible  //In Bearbeitung..
         {
             idc = 1108;
             text = "";
@@ -105,7 +105,7 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_Gang: Life_RscButtonInvisible  //OK
+        class Button_Gang: Life_RscButtonInvisible  //In Bearbeitung...
         {
             idc = 2011;
             text = "";
@@ -115,25 +115,21 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_dance: Life_RscButtonInvisible  //Implementierung folgt!
+        class Button_dance: Life_RscButtonInvisible  //Completed
         {
             idc = 1110;
             text = "";
+			onButtonClick = "createDialog ""Life_Xer_Animation"";";
             x = 0.682227 * safezoneW + safezoneX;
             y = 0.477343 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
-            ColorBackground[] = {0,0,0,0.627450};
-            ColorText[] = {1,1,1,1};
-            font = TahomaB;
-            colorFocused[] = {0,0,0,1};
-            colorDisabled[] = {0,0,0,1};
         };
         class Button_market: Life_RscButtonInvisible  //Implementierung folgt!
         {
             idc = 1111;
 			text = "";
-			onButtonClick = "hint ""Marktsystem in Arbeit!"";";
+			onButtonClick = "hint ""Marktsystem folgt in kürze...!"";";
             x = 0.721116 * safezoneW + safezoneX;
             y = 0.478577 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
@@ -144,7 +140,7 @@ class smartphoneopen {
             colorFocused[] = {0,0,0,1};
             colorDisabled[] = {0,0,0,1};
         };
-        class Button_wanted: Life_RscButtonInvisible 
+        class Button_wanted: Life_RscButtonInvisible //Status? In bearbeitung...
         {
             idc = 2012;
             text = "";
@@ -154,7 +150,7 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_admin: Life_RscButtonInvisible 
+        class Button_admin: Life_RscButtonInvisible //Status?
         {
 			idc = 2021;
             text = "";
@@ -166,4 +162,3 @@ class smartphoneopen {
         };
     };
 };
-////////////////////////////////////////////////////////////////////////////

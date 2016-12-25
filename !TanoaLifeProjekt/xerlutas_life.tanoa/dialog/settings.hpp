@@ -15,6 +15,15 @@ class SettingsMenu {
             h = 0.712529 * safezoneH;
         };
 		
+		class CorseFrame : Life_RscFrame {
+            idc = -1;
+			ColorBackground[] = {0,0,0,0};
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.724938 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.031481 * safezoneH;
+        };
+		
         class SideChatHeader : Life_RscText {
             idc = -1;
             text = "$STR_SM_SC";
@@ -47,11 +56,11 @@ class SettingsMenu {
 
         class Title: Life_RscTitle {
             idc = -1;
-            colorBackground[] = {0,0,0,0};
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             text = "$STR_SM_Title";
             x = 0.683367 * safezoneW + safezoneX;
-            y = 0.395608 * safezoneH + safezoneY;
-            w = 0.083333 * safezoneW;
+            y = 0.395308 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
             h = 0.031481 * safezoneH;
         };
     };

@@ -6,72 +6,94 @@ class Life_key_management {
     onLoad = "[] spawn life_fnc_keyMenu;";
 
     class controlsBackground {
-        class Life_RscTitleBackground: Life_RscText {
-            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+        class Xer_Background: Life_RscPicture
+        {
             idc = -1;
-            x = 0.1;
-            y = 0.2;
-            w = 0.6;
-            h = (1 / 25);
+			text = "dialog\CustomSmartphone\HandyWechselMenu.paa";
+            x = 0.598954 * safezoneW + safezoneX;
+            y = 0.289352 * safezoneH + safezoneY;
+            w = 0.409382 * safezoneW;
+            h = 0.712529 * safezoneH;
+        };
+		
+		class ListBoxHeader : Life_RscText {
+            idc = -1;
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+            x = 0.685069 * safezoneW + safezoneX;
+            y = 0.428950 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.262345 * safezoneH;
+        };
+		
+		class Button1Header : Life_RscText {
+            idc = -1;
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+            x = 0.685069 * safezoneW + safezoneX;
+            y = 0.698240 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.062654 * safezoneH;
+        };
+		
+		class Button2Header : Life_RscText {
+            idc = -1;
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+            x = 0.685069 * safezoneW + safezoneX;
+            y = 0.767375 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.062654 * safezoneH;
+        };
+		
+		class Title: Life_RscTitle {
+            idc = -1;
+            text = "$STR_Keys_Title";
+            x = 0.685069 * safezoneW + safezoneX;
+            y = 0.395308 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.031481 * safezoneH;
         };
 
-        class MainBackground: Life_RscText {
-            colorBackground[] = {0, 0, 0, 0.7};
-            idc = -1;
-            x = 0.1;
-            y = 0.2 + (11 / 250);
-            w = 0.6;
-            h = 0.6 - (22 / 250);
-        };
+        
     };
 
     class controls {
-        class Title: Life_RscTitle {
-            colorBackground[] = {0, 0, 0, 0};
-            idc = -1;
-            text = "$STR_Keys_Title";
-            x = 0.1;
-            y = 0.2;
-            w = 0.6;
-            h = (1 / 25);
-        };
 
         class KeyChainList: Life_RscListBox {
             idc = 2701;
             text = "";
             sizeEx = 0.035;
-            x = 0.12;
-            y = 0.26;
-            w = 0.56;
-            h = 0.370;
+            x = 0.689375 * safezoneW + safezoneX;
+            y = 0.436049 * safezoneH + safezoneY;
+            w = 0.134444 * safezoneW;
+            h = 0.246604 * safezoneH;
         };
 
-        class CloseButtonKey: Life_RscButtonMenu {
-            idc = -1;
-            text = "$STR_Global_Close";
-            onButtonClick = "closeDialog 0;";
-            x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-            y = 0.8 - (1 / 25);
-            w = (6.25 / 40);
-            h = (1 / 25);
-        };
+        class ButtonClose: Life_RscButtonInvisible
+		{
+			idc = -1;
+			text = "";
+			onButtonClick = "closeDialog 0;";
+			x = 0.679335 * safezoneW + safezoneX;
+            y = 0.840492 * safezoneH + safezoneY;
+            w = 0.154175 * safezoneW;
+            h = 0.053272 * safezoneH;
+		};
 
         class NearPlayers: Life_RscCombo {
             idc = 2702;
-            x = 0.26;
-            y = 0.645;
-            w = 0.275;
-            h = 0.03;
+            x = 0.689375 * safezoneW + safezoneX;
+            y = 0.646851 * safezoneH + safezoneY;
+            w = 0.134444 * safezoneW;
+            h = 0.037037 * safezoneH;
         };
 
         class DropKey: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Keys_DropKey";
             onButtonClick = "[] call life_fnc_keyDrop";
-            x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-            y = 0.8 - (1 / 25);
-            w = (6.25 / 40);
-            h = (1 / 25);
+            x = 0.690069 * safezoneW + safezoneX;
+            y = 0.780184 * safezoneH + safezoneY;
+            w = 0.134444 * safezoneW;
+            h = 0.037037 * safezoneH;
         };
 
         class GiveKey: Life_RscButtonMenu {
@@ -79,10 +101,10 @@ class Life_key_management {
             text = "$STR_Keys_GiveKey";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_keyGive";
-            x = 0.32;
-            y = 0.69;
-            w = (6.25 / 40);
-            h = (1 / 25);
+            x = 0.690069 * safezoneW + safezoneX;
+            y = 0.711049 * safezoneH + safezoneY;
+            w = 0.134444 * safezoneW;
+            h = 0.037037 * safezoneH;
         };
     };
 };
