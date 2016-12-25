@@ -53,12 +53,12 @@ class RscText_1001: Life_RscText
 {
 	idc = 7056;
 
-	text = "Bitte wähle ein Item aus!"; //--- ToDo: Localize;
+	text = "Wähle zuerst ein Item!"; //--- ToDo: Localize;
 	x = 0.685069 * safezoneW + safezoneX;
 	y = 0.462962 * safezoneH + safezoneY;
 	w = 0.145312* safezoneW;
 	h = 0.031481 * safezoneH;
-	sizeEx = 0.060;
+	sizeEx = 0.055;
 };
 class RscText_1002: Life_RscText
 {
@@ -79,7 +79,7 @@ class RscText_1003: Life_RscText
 	y = 0.583950 * safezoneH + safezoneY;
 	w = 0.146527 * safezoneW;
 	h = 0.031481 * safezoneH;
-	sizeEx = 0.060;
+	sizeEx = 0.055;
 };
 class RscButtonMenu_2400: Life_RscButtonInvisible
 {
