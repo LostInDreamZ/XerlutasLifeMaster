@@ -4,145 +4,163 @@ class Life_my_smartphone {
  movingEnable = false;
  enableSimulation = true;
  onLoad = "[] spawn life_fnc_smartphone;";
- 
-	class controlsBackground {
-		class Xer_Background: Life_RscPicture
-        {
-            idc = -1;
-            text = "dialog\CustomSmartphone\Handy1024quer.paa";
-            x = 0.370658 * safezoneW + safezoneX;
-            y = -0.03357 * safezoneH + safezoneY;
-            w = 0.596355 * safezoneW;
-            h = 1.039860 * safezoneH;
-        };
-	
-	};
-	
-	class controls {
-		class MessageTitle : Life_RscTitle { 
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			idc = 88886;
-			text = "";
-			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-			x = 0.568999 * safezoneW + safezoneX;
-            y = 0.564289 * safezoneH + safezoneY;
-            w = 0.265375 * safezoneW;
-            h = 0.041666 * safezoneH;
-		};
-		
-		class RandomTitle : Life_RscTitle {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			idc = 88890;
-			text = "$STR_SMARTPHONE_RANDOMTITLE";
-			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-			x = 0.568999 * safezoneW + safezoneX;
-            y = 0.740833 * safezoneH + safezoneY;
-            w = 0.265375 * safezoneW;
-            h = 0.041666 * safezoneH;
-		};
-		
-		class PlayerList : Life_RscListBox {
-			idc = 88881;
-			onLBSelChanged = "[2] spawn life_fnc_smartphone;";
-			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			x = 0.451041 * safezoneW + safezoneX;
-            y = 0.564289 * safezoneH + safezoneY;
-            w = 0.113194 * safezoneW;
-            h = 0.041666 * safezoneH;
-		};
-		
-		class MessageList : Life_RscListNBox {
-			idc = 88882;
-			onLBSelChanged = "[(lbCurSel 88882)] call life_fnc_showMsg;";
-			//sizeEx = 0.04;
-			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			colorBackground[] = {0, 0, 0, 0.0};
-			columns[] = {0,0.3};
-			x = 0.568999 * safezoneW + safezoneX;
-            y = 0.564289 * safezoneH + safezoneY;
-            w = 0.265375 * safezoneW;
-            h = 0.041666 * safezoneH;
-		};
-		
-		class TextShow : Life_RscControlsGroup {
-			x = 0.569618 * safezoneW + safezoneX;
-            y = 0.783579 * safezoneH + safezoneY;
-            w = 0.266145 * safezoneW;
-            h = 0.111728 * safezoneH;
-				class HScrollbar : HScrollbar {
-					height = 0;
-				};
-				class controls {
-					class showText : Life_RscStructuredText {
-						idc = 88887;
-						text = "";
-						colorBackground[] = {0.28,0.28,0.28,0.28};
-						size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-						shadow = 0;
-						x = 0;
-						y = 0;
-						w = 0.69;//w = 0.7;
-						h = 1;//h = 2.15;
-					};
-				};
-		};
-		
-		class Schreiben : Life_RscButtonMenu {
-			idc = 887892;
-			text = "$STR_SMARTPHONE_SCHREIBEN";
-			onButtonClick = "[4] call life_fnc_smartphone;";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1.0};
-			x = 0.450347 * safezoneW + safezoneX;
-            y = 0.902407 * safezoneH + safezoneY;
-            w = 0.11875 * safezoneW;
-            h = 0.037037 * safezoneH;
-		};
- 
-		class Title : Life_RscTitle {
-			colorBackground[] = {0, 0, 0, 0};
-			idc = -1;
-			text = "$STR_SMARTPHONE_TITLE";
-			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-			x = 0.1;
-			y = 0.2;
-			w = 0.95;
-			h = (1 / 25);
-		};
-		
-		class PlayerListTitle : Life_RscTitle {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			idc = -1;
-			text = "$STR_SMARTPHONE_PLAYERLISTTITLE";
-			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-			x = 0.451041 * safezoneW + safezoneX;
-            y = 0.564289 * safezoneH + safezoneY;
-            w = 0.113194 * safezoneW;
-            h = 0.041666 * safezoneH;
-		};
-		
-		class CloseLoadMenu : Life_RscButtonInvisible {
-			idc = -1;
-			text = "$STR_Global_Close";
-			onButtonClick = "closeDialog 0;";
-			x = 0.839236 * safezoneW + safezoneX;
-            y = 0.556110 * safezoneH + safezoneY;
-            w = 0.045833 * safezoneW;
-            h = 0.385802 * safezoneH;
-		};
-		
-		class Notruf : Life_RscButtonMenu {
-			idc = -1;
-			text = "$STR_SMARTPHONE_NOTRUF";
-			onButtonClick = "createDialog ""Life_smartphone_notruf"";";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
-			x = 0.716666 * safezoneW + safezoneX;
-            y = 0.902407 * safezoneH + safezoneY;
-            w = 0.11875 * safezoneW;
-            h = 0.037037 * safezoneH;
-		};
-	};
+ class controlsBackground {
+ class Life_RscTitleBackground:Life_RscText {
+ colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+ idc = -1;
+ x = 0.1;
+ y = 0.2;
+ w = 0.95;
+ h = (1 / 25);
+ };
+ class MainBackground:Life_RscText {
+ colorBackground[] = {0, 0, 0, 0.7};
+ idc = -1;
+ x = 0.1;
+ y = 0.2 + (11 / 250);
+ w = 0.95;
+ h = 0.7 - (22 / 250);
+ };
+ class PlayerListTitleBackground:Life_RscText {
+ colorBackground[] = {0.588, 0.424, 0.145, 1.0};
+ idc = -1;
+ x = 0.11;
+ y = 0.25;
+ w = 0.2;
+ h = (1 / 25);
+ };
+ class MessageTitleBackground:Life_RscText {
+ colorBackground[] = {0.588, 0.424, 0.145, 1.0};
+ idc = -1;
+ x = 0.325;
+ y = 0.25;
+ w = 0.7;
+ h = (1 / 25);
+ };
+ class RandomTitleBackground:Life_RscText {
+ colorBackground[] = {0.588, 0.424, 0.145, 1.0};
+ idc = -1;
+ x = 0.325;
+ y = 0.25 + 0.3 + (1 / 25);
+ w = 0.7;
+ h = (1 / 25);
+ };
+ };
+ class controls {
+ class MessageTitle : Life_RscTitle {
+ colorBackground[] = {0, 0, 0, 0};
+ idc = 88886;
+ text = "";
+ sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
+ x = 0.325;
+ y = 0.25;
+ w = 0.7;
+ h = (1 / 25);
+ };
+ class RandomTitle : Life_RscTitle {
+ colorBackground[] = {0, 0, 0, 0};
+ idc = 88890;
+ text = "$STR_SMARTPHONE_RANDOMTITLE";
+ sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
+ x = 0.325;
+ y = 0.25 + 0.3 + (1 / 25);
+ w = 0.7;
+ h = (1 / 25);
+ };
+ class PlayerList : Life_RscListBox {
+ idc = 88881;
+ onLBSelChanged = "[2] spawn life_fnc_smartphone;";
+ sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+ x = 0.11;
+ y = 0.25 + (1 / 25);
+ w = 0.2;
+ h = 0.5;
+ };
+ class MessageList : Life_RscListNBox {
+ idc = 88882;
+ onLBSelChanged = "[(lbCurSel 88882)] call life_fnc_showMsg;";
+ //sizeEx = 0.04;
+ sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+ colorBackground[] = {0, 0, 0, 0.0};
+ columns[] = {0,0.3};
+ x = 0.325;
+ y = 0.25 + (1 / 25);
+ w = 0.7;
+ h = 0.3;
+ };
+ class TextShow : Life_RscControlsGroup {
+ x = 0.325;
+ y = 0.25 + 0.3 + (1 / 25) + (1 / 25);
+ w = 0.7;
+ h = 0.15;
+ class HScrollbar : HScrollbar {
+ height = 0;
+ };
+ class controls {
+ class showText : Life_RscStructuredText {
+ idc = 88887;
+ text = "";
+ colorBackground[] = {0.28,0.28,0.28,0.28};
+ size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+ shadow = 0;
+ x = 0;
+ y = 0;
+ w = 0.69;//w = 0.7;
+ h = 1;//h = 2.15;
+ };
+ };
+ };
+ class Schreiben : Life_RscButtonMenu {
+ idc = 887892;
+ text = "$STR_SMARTPHONE_SCHREIBEN";
+ onButtonClick = "[4] call life_fnc_smartphone;";
+ colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1.0};
+ x = 0.11;
+ y = 0.25 + (1 / 25) + 0.51;
+ w = 0.2;
+ h = (1 / 25);
+ };
+ class Title : Life_RscTitle {
+ colorBackground[] = {0, 0, 0, 0};
+ idc = -1;
+ text = "$STR_SMARTPHONE_TITLE";
+ sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+ x = 0.1;
+ y = 0.2;
+ w = 0.95;
+ h = (1 / 25);
+ };
+ class PlayerListTitle : Life_RscTitle {
+ colorBackground[] = {0, 0, 0, 0};
+ idc = -1;
+ text = "$STR_SMARTPHONE_PLAYERLISTTITLE";
+ sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
+ x = 0.11;
+ y = 0.25;
+ w = 0.2;
+ h = (1 / 25);
+ };
+ class CloseLoadMenu : Life_RscButtonMenu {
+ idc = -1;
+ text = "$STR_Global_Close";
+ onButtonClick = "closeDialog 0;";
+ x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+ y = 0.9 - (1 / 25);
+ w = (6.25 / 40);
+ h = (1 / 25);
+ };
+ class Notruf : Life_RscButtonMenu {
+ idc = -1;
+ text = "$STR_SMARTPHONE_NOTRUF";
+ onButtonClick = "createDialog ""Life_smartphone_notruf"";";
+ colorBackground[] = {0.584, 0.086, 0.086,1.0};
+ x = 0.325 + 0.7 - (6.25 / 40);
+ y = 0.25 + (1 / 25) + 0.51;
+ w = (6.25 / 40);
+ h = (1 / 25);
+ };
+ };
 };
-
 class Life_smartphone_schreiben{
  idd = 88883;
  name = "life_my_smartphone_schreiben";
