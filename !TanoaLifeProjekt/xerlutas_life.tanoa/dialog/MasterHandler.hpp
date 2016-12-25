@@ -8,7 +8,6 @@
 #include "veh_shop.hpp"
 #include "shops.hpp"
 #include "hud_stats.hpp"
-#include "admin_menu.hpp"
 #include "ticket.hpp"
 #include "clothing.hpp"
 #include "trunk.hpp"
