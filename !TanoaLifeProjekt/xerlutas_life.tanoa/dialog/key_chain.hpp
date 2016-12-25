@@ -23,7 +23,7 @@ class Life_key_management {
             w = 0.144444 * safezoneW;
             h = 0.262345 * safezoneH;
         };
-		
+		/*
 		class Button1Header : Life_RscText {
             idc = -1;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -41,6 +41,7 @@ class Life_key_management {
             w = 0.144444 * safezoneW;
             h = 0.062654 * safezoneH;
         };
+		*/
 		
 		class Title: Life_RscTitle {
             idc = -1;
@@ -88,6 +89,7 @@ class Life_key_management {
 
         class DropKey: Life_RscButtonMenu {
             idc = -1;
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             text = "$STR_Keys_DropKey";
             onButtonClick = "[] call life_fnc_keyDrop";
             x = 0.690069 * safezoneW + safezoneX;
@@ -98,6 +100,7 @@ class Life_key_management {
 
         class GiveKey: Life_RscButtonMenu {
             idc = 2703;
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             text = "$STR_Keys_GiveKey";
             onButtonClick = "[] call life_fnc_keyGive";
             x = 0.690069 * safezoneW + safezoneX;

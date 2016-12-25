@@ -24,6 +24,7 @@ class Life_Xer_Animation {
             h = 0.321605 * safezoneH;
         };
 		
+		/*
 		 class ButtonHeader : Life_RscText {
             idc = -1;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -32,6 +33,7 @@ class Life_Xer_Animation {
             w = 0.144444 * safezoneW;
             h = 0.062654 * safezoneH;
         };
+		*/
 	};
 	
 	class controls {
@@ -72,6 +74,7 @@ class Life_Xer_Animation {
 		class performMove : Life_RscButtonMenu {
 			idc = -1;
 			text = "Animation starten";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			tooltip = "Führt die ausgewählte Animation aus.";
 			onButtonClick = "_move = lbData[2902,lbCurSel (2902)];_move = call compile format[""%1"", _move]; player playMove _move; closeDialog 0;closeDialog 0;";
 			x = 0.690069 * safezoneW + safezoneX;
