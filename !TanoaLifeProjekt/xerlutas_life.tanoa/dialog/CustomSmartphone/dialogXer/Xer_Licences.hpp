@@ -15,17 +15,18 @@ class Life_Xer_Licences {
             w = 0.409382 * safezoneW;
             h = 0.712529 * safezoneH;
         };
+		
+		class Title: Life_RscTitle {
+            idc = -1;
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+            text = "Aktuelle Lizenzen";
+            x = 0.685069 * safezoneW + safezoneX;
+            y = 0.395308 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.031481 * safezoneH;
+        };
     };
     class controls {
-		class Title : Life_RscTitle {
-			colorBackground[] = {0, 0, 0, 0};
-			idc = 3001;
-			text = "";
-			x = 0.1;
-			y = 0.2;
-			w = 0.6;
-			h = (1 / 25);
-		};
 		class LicenceList: Life_RscStructuredText
 		{
 			idc = 1500;
