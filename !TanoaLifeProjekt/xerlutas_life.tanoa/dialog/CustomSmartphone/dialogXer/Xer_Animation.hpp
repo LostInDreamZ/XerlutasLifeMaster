@@ -16,9 +16,8 @@ class Life_Xer_Animation {
             h = 0.712529 * safezoneH;
         };
 		
-		 class ListBoxHeader : Life_RscText {
+		 class ListBoxHeader : Life_RscFrame {
             idc = -1;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.685069 * safezoneW + safezoneX;
             y = 0.428950 * safezoneH + safezoneY;
             w = 0.144444 * safezoneW;
