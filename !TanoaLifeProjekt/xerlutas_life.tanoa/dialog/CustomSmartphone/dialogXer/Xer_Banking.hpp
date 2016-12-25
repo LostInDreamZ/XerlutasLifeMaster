@@ -17,27 +17,58 @@ class Life_Xer_Banking {
             h = 0.712529 * safezoneH;
         };
 		
-		class moneyInfo : Life_RscStructuredText {
-			idc = -1;
-			size = "0.022 * safeZoneH";
-			text = "$STR_PM_MoneyStats";
-			x = 0.684375 * safezoneW + safezoneX;
-            y = 0.396543 * safezoneH + safezoneY;
-            w = 0.145833 * safezoneW;
-            h = 0.046296 * safezoneH;
-			colorBackground[] = {0,0,0,0};
-		};
+		class Title: Life_RscTitle {
+            idc = -1;
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+            text = "$STR_PM_MoneyStats";
+            x = 0.683367 * safezoneW + safezoneX;
+            y = 0.395308 * safezoneH + safezoneY;
+            w = 0.144444 * safezoneW;
+            h = 0.031481 * safezoneH;
+        };
+		
+		class Frame_1116: Life_RscFrame
+        {
+            idc = 4116;
+            x = 0.684678 * safezoneW + safezoneX;
+            y = 0.626994 * safezoneH + safezoneY;
+            w = 0.145573 * safezoneW;
+            h = 0.197388 * safezoneH;
+            ColorBackground[] = {0,0,0,0};
+            ColorText[] = {1,1,1,1};
+        };
+		
+		class IconBank: RscPicture
+        {
+            idc = -1;
+            text = "";
+			tooltip = "Bankkonto";
+            x = 0.685069 * safezoneW + safezoneX;
+            y = 0.451234 * safezoneH + safezoneY;
+            w = 0.039930 * safezoneW;
+            h = 0.064814 * safezoneH;
+        };
+		
+		class IconCash: RscPicture
+        {
+            idc = -1;
+            text = "";
+			tooltip = "Bargeld";
+            x = 0.685069 * safezoneW + safezoneX;
+            y = 0.538279 * safezoneH + safezoneY;
+            w = 0.03993 * safezoneW;
+            h = 0.064814 * safezoneH;
+        };
 		
 		class moneyCash : Life_RscStructuredText {
 			idc = 2016;
 			size = "0.022 * safeZoneH";
 			text = "";
 			tooltip = "Bargeld";
-			x = 0.684375 * safezoneW + safezoneX;
-            y = 0.553333 * safezoneH + safezoneY;
-            w = 0.145833 * safezoneW;
-            h = 0.046296 * safezoneH;
-			colorBackground[] = {0,0,0,0};
+			x = 0.731597 * safezoneW + safezoneX;
+            y = 0.551851 * safezoneH + safezoneY;
+            w = 0.097569 * safezoneW;
+            h = 0.031481 * safezoneH;
 		};
 		
 		class moneyBank : Life_RscStructuredText {
@@ -45,11 +76,10 @@ class Life_Xer_Banking {
 			size = "0.022 * safeZoneH";
 			text = "";
 			tooltip = "Bankkonto";
-			x = 0.684375 * safezoneW + safezoneX;               
-            y = 0.496543 * safezoneH + safezoneY;
-            w = 0.145833 * safezoneW;
-            h = 0.046296 * safezoneH;
-			colorBackground[] = {0,0,0,0};
+			x = 0.731597 * safezoneW + safezoneX;
+            y = 0.469135 * safezoneH + safezoneY;
+            w = 0.097569 * safezoneW;
+            h = 0.031481 * safezoneH;
 		};
 	};
 	
@@ -59,33 +89,34 @@ class Life_Xer_Banking {
 			
 			text = "1";
 			sizeEx = "0.022 * safeZoneH";
-			x = 0.684375 * safezoneW + safezoneX;
-            y = 0.689135 * safezoneH + safezoneY;
-            w = 0.145833 * safezoneW;
-            h = 0.046296 * safezoneH;
+			x = 0.696353 * safezoneW + safezoneX;
+            y = 0.660493 * safezoneH + safezoneY;
+            w = 0.125 * safezoneW;
+            h = 0.031481 * safezoneH;
 			colorBackground[] = {0,0,0,0};
 		};
 		
 		class NearPlayers : Life_RscCombo {
 			idc = 2022;
 		
-			x = 0.684375 * safezoneW + safezoneX;
-            y = 0.638518 * safezoneH + safezoneY;
-            w = 0.145833 * safezoneW;
-            h = 0.046296 * safezoneH;
+			x = 0.696353 * safezoneW + safezoneX;
+            y = 0.711111 * safezoneH + safezoneY;
+            w = 0.125 * safezoneW;
+            h = 0.031481 * safezoneH;
 			colorBackground[] = {0,0,0,0};
 		};
 		
 		class moneyDrop : Life_RscButtonMenu {
 			idc = -1;
 			text = "Geben";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			onButtonClick = "[] call life_fnc_giveMoney";
 			size = "0.022 * safeZoneH";
-			x = 0.684375 * safezoneW + safezoneX;
-            y = 0.786666 * safezoneH + safezoneY;
-            w = 0.145833 * safezoneW;
-            h = 0.046296 * safezoneH;
-			tooltip = "Geld Übergeben";
+			x = 0.696353 * safezoneW + safezoneX;
+            y = 0.758024 * safezoneH + safezoneY;
+            w = 0.125 * safezoneW;
+            h = 0.031481 * safezoneH;
+			tooltip = "Geld übergeben";
 		};
 		
 		class ButtonClose: Life_RscButtonInvisible
