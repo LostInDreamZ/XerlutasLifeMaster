@@ -125,11 +125,11 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_market: Life_RscButtonInvisible  //Implementierung folgt!
+        class Button_market: Life_RscButtonInvisible  //Testing...
         {
             idc = 1111;
 			text = "";
-			onButtonClick = "hint ""Marktsystem folgt in kürze...!"";";
+			onButtonClick = "createDialog ""life_dynmarket_prices"";"; 
             x = 0.721116 * safezoneW + safezoneX;
             y = 0.478577 * safezoneH + safezoneY;
             w = 0.035892 * safezoneW;
