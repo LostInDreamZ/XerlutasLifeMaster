@@ -21,6 +21,7 @@ switch(playerSide) do
 	case civilian:
 	{
 		ctrlEnable[2012,false];
+		ctrlEnable[1101,false];
 	};
 	
 	case independent:
@@ -33,4 +34,5 @@ switch(playerSide) do
 
 if (FETCH_CONST(life_adminlevel) < 1) then {
     ctrlShow[2021,false];
+	ctrlShow[1102,false];
 };

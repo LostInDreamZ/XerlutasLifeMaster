@@ -16,6 +16,24 @@ class smartphoneopen {
             w = 0.409382 * safezoneW;
             h = 0.712529 * safezoneH;
         };
+		class Icon_wanted: Life_RscPicture
+        {
+            idc = 1101;
+            text = "dialog\CustomSmartPhone\Wanted.paa";
+            x = 0.681532 * safezoneW + safezoneX;
+            y = 0.609441 * safezoneH + safezoneY;
+            w = 0.035892 * safezoneW;
+            h = 0.067412 * safezoneH;
+        };
+        class Icon_admin: Life_RscPicture 
+        {
+			idc = 1102;
+            text = "dialog\CustomSmartPhone\Admin.paa";
+            x = 0.682227 * safezoneW + safezoneX;
+            y = 0.678577 * safezoneH + safezoneY;
+            w = 0.035892 * safezoneW;
+            h = 0.067412 * safezoneH;
+        };
     };
     class controls {
         class ButtonClose: Life_RscButtonInvisible  //Completed

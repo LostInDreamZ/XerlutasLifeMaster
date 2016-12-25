@@ -41,7 +41,7 @@ class Life_Xer_Banking {
 		class IconBank: Life_RscPicture
         {
             idc = -1;
-            text = "";
+            text = "dialog\CustomSmartphone\bankicon.paa";
 			tooltip = "Bankkonto";
             x = 0.685069 * safezoneW + safezoneX;
             y = 0.451234 * safezoneH + safezoneY;
@@ -52,7 +52,7 @@ class Life_Xer_Banking {
 		class IconCash: Life_RscPicture
         {
             idc = -1;
-            text = "";
+            text = "dialog\CustomSmartphone\cashicon.paa";
 			tooltip = "Bargeld";
             x = 0.685069 * safezoneW + safezoneX;
             y = 0.538279 * safezoneH + safezoneY;
