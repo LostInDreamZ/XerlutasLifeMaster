@@ -138,7 +138,7 @@ class CfgFunctions {
 		tag = "LOUTS";
 		class LOADOUT
 		{
-			file = "\life_server\loadout";
+			file = "\life_server\Functions\loadout";
 			class insertNewPlayer {};
 			class loadoutHandler {};
 			class updateLoadouts {};
