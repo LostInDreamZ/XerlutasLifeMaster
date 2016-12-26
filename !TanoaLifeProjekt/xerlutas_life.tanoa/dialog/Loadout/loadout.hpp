@@ -14,7 +14,7 @@ class loadoutGUI
 		class Xer_Background: Life_RscPicture
         {
             idc = -1;
-            text = "dialog\loadout\loadout.png";
+            text = "dialog\loadout\loadout.paa";
             x = 0.270966 * safezoneW + safezoneX;
             y = 0.17906 * safezoneH + safezoneY;
             w = 0.480666 * safezoneW;
