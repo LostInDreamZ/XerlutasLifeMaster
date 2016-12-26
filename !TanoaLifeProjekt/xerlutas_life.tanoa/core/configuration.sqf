@@ -1,4 +1,5 @@
 #include "..\script_macros.hpp"
+#define __SVAR__(var1,var2) var1 = compileFinal (if(typeName var2 isEqualTo "STRING") then {var2} else {str(var2)})
 /*
     File: configuration.sqf
     Author:
@@ -49,6 +50,13 @@ life_civ_position = [];
 life_markers = false;
 life_canpay_bail = true;
 life_smartphoneTarget = ObjNull;
+
+/* ********************************************************************************* */
+/* ******************************* LOADOUT CONFIG ********************************** */
+/* ********************************************************************************* */
+
+__SVAR__(sd_loadoutMaster,TRUE);							// ENABLE THE LOADOUT SYSTEM 									DEFAULT: TRUE
+__SVAR__(sd_loadoutCooldown,180);							// SYNC COOLDOWN TIME IN SECONDS
 
 //Loadout
 sd_loadoutSyncCooldown 	= 	false;
