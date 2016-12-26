@@ -8,6 +8,7 @@
 private["_dropdownMenu","_buttonSaveGear"];
 disableSerialization;
 
+if(!(playerSide isEqualTo civilian)) exitWith {hint "Du bist kein Polizist!";};
 if(!(call sd_loadoutMaster)) exitWith {};
 
 if(!(createDialog "loadoutGUI")) exitWith {};

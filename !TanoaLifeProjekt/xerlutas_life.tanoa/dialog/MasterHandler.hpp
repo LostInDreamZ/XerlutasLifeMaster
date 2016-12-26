@@ -30,6 +30,7 @@
 #include "player_inv.hpp"
 #include "gang.hpp"
 #include "key_chain.hpp"
+#include "wanted_list.hpp"
 #include "CustomSmartphone\dialogXer\Xer_Licences.hpp"
 #include "CustomSmartphone\dialogXer\Xer_Banking.hpp"
 #include "CustomSmartphone\dialogXer\Xer_Animation.hpp"
