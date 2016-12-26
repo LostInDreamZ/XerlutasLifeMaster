@@ -41,3 +41,6 @@
 #include "dynmarket_changeprice.hpp"
 #include "dynmarket_prices.hpp"
 
+//Loadout
+#include "Loadout\loadout.hpp"
+

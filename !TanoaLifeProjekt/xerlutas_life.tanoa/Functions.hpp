@@ -106,6 +106,7 @@ class Life_Client_Core {
         class robReceive {};
         class tazed {};
     };
+	
 
     class Config {
         file = "core\config";
