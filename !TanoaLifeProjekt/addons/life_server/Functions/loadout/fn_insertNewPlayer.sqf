@@ -22,8 +22,8 @@ _query = format["SELECT name, playerid FROM loadouts WHERE playerid='%1'",_uid];
 _result = [_query,2] call DB_fnc_queryHandler;
 
 // ERROR CHECKS 2
-if(typeName _result isEqualTo "STRING") exitWith {[[],"LOUT_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP};
-if(count _result != 0) exitWith {[[],"LOUT_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP};
+if(typeName _result isEqualTo "STRING") exitWith {[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP};
+if(count _result != 0) exitWith {[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP};
 
 // CONVERT DATA
 _name = [_name] call DB_fnc_mresString;
@@ -33,4 +33,4 @@ _query = format["INSERT INTO loadouts (name, playerid, active, loadout_1, loadou
 [_query,1] call DB_fnc_queryHandler;
 
 // SEND TO CLIENT
-[[],"LOUT_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP;
+[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP;
