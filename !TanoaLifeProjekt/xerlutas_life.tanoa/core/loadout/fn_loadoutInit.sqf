@@ -1,3 +1,4 @@
+#include "..\..\script_macros.hpp"
 /*
 	File: fn_loadoutInit.sqf 
 	Author: DeadP4xel
