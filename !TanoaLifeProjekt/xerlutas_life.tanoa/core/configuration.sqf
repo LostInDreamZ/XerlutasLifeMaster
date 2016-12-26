@@ -50,6 +50,16 @@ life_markers = false;
 life_canpay_bail = true;
 life_smartphoneTarget = ObjNull;
 
+//Loadout
+sd_loadoutSyncCooldown 	= 	false;
+sd_loadoutLoad 			=	false;
+sd_activeProfile		= -1;
+sd_loadout_1			= [];
+sd_loadout_2			= [];
+sd_loadout_3			= [];
+sd_loadout_4			= [];
+sd_loadout_5			= [];
+
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast",true];
 life_settings_enableSidechannel = profileNamespace getVariable ["life_enableSidechannel",true];

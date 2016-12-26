@@ -167,6 +167,14 @@ life_hideoutBuildings = [];
 DYNAMICMARKET_boughtItems = [];
 [player] remoteExec ["TON_fnc_playerLogged",RSERV];
 
+if(call sd_loadoutMaster) then {
+    [] call life_fnc_loadoutSendRequest;
+    waitUntil {sd_loadoutLoad};
+    diag_log "SD_CLIENT:: LOADOUT SYSTEM ENABLED";
+} else {
+    diag_log "SD_CLIENT:: LOADOUT SYSTEM DISABLED";
+};
+
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "----------------------------------------------------------------------------------------------------";

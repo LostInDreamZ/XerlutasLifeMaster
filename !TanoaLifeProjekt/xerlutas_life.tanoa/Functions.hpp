@@ -172,6 +172,20 @@ class Life_Client_Core {
         class wireTransfer {};
 		class insureCar {}; //Fahrzeug Versicherung
     };
+	
+	class Loadout {
+        file = "core\loadout";
+        class loadoutGetData {};
+        class loadoutInit {};
+        class loadoutInsertPlayer {};
+        class loadoutSave {};
+        class loadoutWear {};
+        class loadoutSendRequest {};
+        class loadoutUpdate {};
+        class loadoutList {};
+        class loadoutChange {};
+        class loadoutDeleteGear {};
+    };
 
     class Functions {
         file = "core\functions";
@@ -221,6 +235,7 @@ class Life_Client_Core {
         class tazeSound {};
         class teleport {};
         class whereAmI {};
+		class mArrayToSArray {};
     };
 	
 	class XerlutasSmartphone {

@@ -1,5 +1,6 @@
 #define true 1
 #define false 0
+#define __SVAR__(var1,var2) var1 = compileFinal (if(typeName var2 isEqualTo "STRING") then {var2} else {str(var2)})
 
 /*
     Master settings for various features and functionality
@@ -212,6 +213,13 @@ class Life_Settings {
         {"STR_Crime_25","20000","25"}
     };
 };
+
+/* ********************************************************************************* */
+/* ******************************* LOADOUT CONFIG ********************************** */
+/* ********************************************************************************* */
+
+__SVAR__(sd_loadoutMaster,TRUE);							// ENABLE THE LOADOUT SYSTEM 									DEFAULT: TRUE
+__SVAR__(sd_loadoutCooldown,180);							// SYNC COOLDOWN TIME IN SECONDS 
 
 #include "Config_Clothing.hpp"
 #include "Config_Licenses.hpp"

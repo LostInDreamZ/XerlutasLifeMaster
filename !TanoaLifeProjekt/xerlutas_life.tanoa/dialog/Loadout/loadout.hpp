@@ -1,113 +1,149 @@
-class Life_loadout{
-	idd = 9542;
-	name= "Life_loadout";
-	movingEnable = false;
-	enableSimulation = true;
-	onload = "[player] remoteExec ['UGC_fnc_loadoutGet',2];";
+class loadoutGUI
+{
+    idd = 75000;
+    movingEnable = 0;
+    fadeIn = 0;
+    duration = 10e10;
+    fadeOut = 0;
+    name = "loadoutGUI";
+    onLoad = "uiNamespace setVariable ['loadoutGUI',_this select 0]";
+    objects[] = {};
 
-	class controlsBackground {
-		class IGUIBack_2200: life_RscPicture
+    class controlsBackground
+    {
+		class MainBackground: Life_RscText
 		{
 			idc = -1;
-			text = "dialog\Loadout\loadout.png";
-			x = 0.309667 * safezoneW + safezoneX;
-            y = 0.17906 * safezoneH + safezoneY;
-            w = 0.380666 * safezoneW;
-            h = 0.630604 * safezoneH;
+			x = 0.3 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
+			w = 0.4 * safezoneW;
+			h = 0.48 * safezoneH;
+			colorBackground[] = {0,0,0,0.7};
+		};
+		class TitleHeader: Life_RscText
+		{
+			idc = -1;
+			text = "Loadout Menü";
+			x = 0.3 * safezoneW + safezoneX;
+			y = 0.26 * safezoneH + safezoneY;
+			w = 0.4 * safezoneW;
+			h = 0.02 * safezoneH;
+			colorBackground[] = {0.541,0.541,0.4,1};
+		};
+		class TitleHeaderCurrentGear: Life_RscText
+		{
+			idc = -1;
+			text = "Current Items";
+			x = 0.3125 * safezoneW + safezoneX;
+			y = 0.34 * safezoneH + safezoneY;
+			w = 0.1125 * safezoneW;
+			h = 0.02 * safezoneH;
+			colorBackground[] = {0.541,0.541,0.4,1}; 
+		};
+		class TitleHeaderSavedItems: Life_RscText
+		{
+			idc = -1;
+			text = "Saved Items";
+			x = 0.575 * safezoneW + safezoneX;
+			y = 0.34 * safezoneH + safezoneY;
+			w = 0.1125 * safezoneW;
+			h = 0.02 * safezoneH;
+			colorBackground[] = {0.541,0.541,0.4,1};
 		};
 	};
-	class controls{
-		class RscButtonMenu_2400: Life_RscButtonInvisible
+
+	class controls
+	{
+		class ButtonClose: Life_RscButtonMenu
 		{
-			idc = 2000;
-			onButtonClick = "[] spawn life_fnc_loadoutSave;";
-			x = 0.546701 * safezoneW + safezoneX;
-            y = 0.460184 * safezoneH + safezoneY;
-            w = 0.063194 * safezoneW;
-            h = 0.061728 * safezoneH;
+			idc = -1;
+			text = "$STR_Global_Close";
+			onButtonClick = "closeDialog 0";
+			x = 0.45 * safezoneW + safezoneX;
+			y = 0.72 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.02 * safezoneH;
+			colorBackground[] = {0.541,0.541,0.4,1};
 		};
-		class RscButtonMenu_2401: Life_RscButtonInvisible
+		class ButtonWear: Life_RscButtonMenu
 		{
-			idc = 2001;
-			onButtonClick = "[] spawn life_fnc_loadoutDelete;";
-			x = 0.527603 * safezoneW + safezoneX;
-            y = 0.521913 * safezoneH + safezoneY;
-            w = 0.066666 * safezoneW;
-            h = 0.060493 * safezoneH;
+			idc = 75001;
+			text = "WEAR SAVED GEAR";
+			onButtonClick = "[] call life_fnc_loadoutChange; closeDialog 0;";
+			x = 0.4375 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.125 * safezoneW;
+			h = 0.020006 * safezoneH;
+			colorBackground[] = {0.541,0.541,0.4,1};
 		};
-		class RscButtonMenu_2402: Life_RscButtonInvisible
+		class ButtonSafe: Life_RscButtonMenu
 		{
-			idc = 2002;
-			onButtonClick = "closeDialog 0;";
-			x = 0.547048 * safezoneW + safezoneX;
-            y = 0.587345 * safezoneH + safezoneY;
-            w = 0.065972 * safezoneW;
-            h = 0.060493 * safezoneH;
-		};
-		class RscButtonMenu_2403: Life_RscButtonInvisible
-		{
-			idc = 2003;
-			onButtonClick = "[] spawn life_fnc_loadoutSelect;";
-			x = 0.528298 * safezoneW + safezoneX;
-            y = 0.404629 * safezoneH + safezoneY;
-            w = 0.064583 * safezoneW;
-            h = 0.055555 * safezoneH;
-		};
-		class RscEdit_1400: Life_RscEdit
-		{
-			idc = 4000;
-			x = 0.353659 * safezoneW + safezoneX;
-            y = 0.273876 * safezoneH + safezoneY;
-            w = 0.134 * safezoneW;
-            h = 0.022 * safezoneH;
-			colorBackground[] = {-1,-1,-1,-1};
-			colorBackgroundFocused[] = {1,1,1,0.12};
-			colorBackground2[] = {0.75,0.75,0.75,0.2};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,1};
-			color2[] = {0,0,0,1};
-			colorText[] = {1,1,1,1};
-			colorDisabled[] = {0,0,0,0.4};
-		};
-		class RscText_1000: Life_RscText
-		{
-			idc = 3000;
+			idc = 75002;
 			text = "";
-			x = 0.399851 * safezoneW + safezoneX;
-            y = 0.680345 * safezoneH + safezoneY;
-            w = 0.087450 * safezoneW;
-            h = 0.014 * safezoneH;
-			colorBackground[] = {-1,-1,-1,-1};
-			colorBackgroundFocused[] = {1,1,1,0.12};
-			colorBackground2[] = {0.75,0.75,0.75,0.2};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,1};
-			color2[] = {0,0,0,1};
-			colorText[] = {1,1,1,1};
-			colorDisabled[] = {0,0,0,0.4};
-			linespacing = 0;
+			onButtonClick = "[] spawn life_fnc_loadoutUpdate";
+			x = 0.4375 * safezoneW + safezoneX;
+			y = 0.54 * safezoneH + safezoneY;
+			w = 0.125 * safezoneW;
+			h = 0.020006 * safezoneH;
+			colorBackground[] = {0.541,0.541,0.4,1};
 		};
-		class RscListbox_1500: Life_RscListbox
+		class ButtonLoadGear: Life_RscButtonMenu
 		{
-			idc = 1000;
-			onLBSelChanged = "call life_fnc_loadoutOnLbChanged;";
-			sizeEx = 0.05;
-			x = 0.350607 * safezoneW + safezoneX;
-            y = 0.324382 * safezoneH + safezoneY;
-            w = 0.133748 * safezoneW;
-            h = 0.275 * safezoneH;
+			idc = 75003;
+			text = "SAVE CURRENT GEAR";
+			onButtonClick = "[] call life_fnc_loadoutSave; closeDialog 0";
+			x = 0.4375 * safezoneW + safezoneX;
+			y = 0.46 * safezoneH + safezoneY;
+			w = 0.125 * safezoneW;
+			h = 0.020006 * safezoneH;
+			colorBackground[] = {0.541,0.541,0.4,1};
+		};
+		class DropDownMenu: Life_RscCombo
+		{
+			idc = 75004;
+			onLBSelChanged = "_this call life_fnc_loadoutList";
+			x = 0.4 * safezoneW + safezoneX;
+			y = 0.3 * safezoneH + safezoneY;
+			w = 0.2 * safezoneW;
+			h = 0.02 * safezoneH;
+		};
+		class ListBoxCurrentItems: Life_RscListbox
+		{
+			idc = 75005;
+			x = 0.3125 * safezoneW + safezoneX;
+			y = 0.36 * safezoneH + safezoneY;
+			w = 0.1125 * safezoneW;
+			h = 0.32 * safezoneH;
+		};
+		class ListBoxSavedItems: Life_RscListbox
+		{
+			idc = 75006;
+			x = 0.575 * safezoneW + safezoneX;
+			y = 0.36 * safezoneH + safezoneY;
+			w = 0.1125 * safezoneW;
+			h = 0.32 * safezoneH;
+		};
+		class ButtonClearCurrent: Life_RscButtonMenu
+		{
+			idc = 75008;
+			text = "Clear Current Slot";
+			onButtonClick = "closeDialog 0; [0] spawn life_fnc_loadoutDeleteGear";
+			x = 0.4375 * safezoneW + safezoneX;
+			y = 0.62 * safezoneH + safezoneY;
+			w = 0.125 * safezoneW;
+			h = 0.02 * safezoneH;
+			colorBackground[] = {0.584,0.086,0.086,1};
+		};
+		class ButtonClearAll: Life_RscButtonMenu
+		{
+			idc = 75007;
+			text = "Clear all Slots";
+			onButtonClick = "closeDialog 0; [1] spawn life_fnc_loadoutDeleteGear";
+			x = 0.4375 * safezoneW + safezoneX;
+			y = 0.66 * safezoneH + safezoneY;
+			w = 0.125 * safezoneW;
+			h = 0.02 * safezoneH;
+			colorBackground[] = {0.584,0.086,0.086,1};
 		};
 	};
 };
-/* #Pymazy
-$[
-	1.063,
-	["sss",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
-	[2200,"",[1,"",["0.340532 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.318937 * safezoneW","0.374 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[2400,"",[1,"",["0.345676 * safezoneW + safezoneX","0.588 * safezoneH + safezoneY","0.0411531 * safezoneW","0.055 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[2401,"",[1,"",["0.613171 * safezoneW + safezoneX","0.588 * safezoneH + safezoneY","0.0411531 * safezoneW","0.055 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1400,"",[1,"",["0.391973 * safezoneW + safezoneX","0.621 * safezoneH + safezoneY","0.216054 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1000,"",[1,"",["0.391973 * safezoneW + safezoneX","0.588 * safezoneH + safezoneY","0.216054 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1500,"",[1,"",["0.345676 * safezoneW + safezoneX","0.291 * safezoneH + safezoneY","0.308648 * safezoneW","0.286 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
-]
-*/

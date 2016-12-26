@@ -26,6 +26,7 @@ class CfgFunctions {
             class bool {};
             class mresString {};
             class updatePartial {};
+			class queryHandler {};
         };
     };
 
@@ -90,6 +91,7 @@ class CfgFunctions {
 			class sleeper {}; 
 		};
 		
+		
 		class Smartphone {
 			file = "\life_server\Functions\Smartphone";
 			class handleMessages {};
@@ -130,6 +132,18 @@ class CfgFunctions {
             class getPlayTime {};
         };
     };
+	
+	class LOADOUT
+	{
+		tag = "LOUTS";
+		class LOADOUT
+		{
+			file = "\life_server\loadout";
+			class insertNewPlayer {};
+			class loadoutHandler {};
+			class updateLoadouts {};
+		};
+	};
 };
 
 class CfgVehicles {
