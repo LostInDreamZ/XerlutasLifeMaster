@@ -24,12 +24,12 @@ _result = [_query,2] call DB_fnc_queryHandler;
 // ERROR CHECKS 2
 if(typeName _result isEqualTo "STRING") exitWith {
 //[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP
-[1,] remoteExecCall ["life_fnc_loadoutSendRequest",(owner _sender)];
+[] remoteExec ["life_fnc_loadoutSendRequest",(owner _sender)];
 };
 
 if(count _result != 0) exitWith {
 //[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP
-[1,] remoteExecCall ["life_fnc_loadoutSendRequest",(owner _sender)];
+[] remoteExec ["life_fnc_loadoutSendRequest",(owner _sender)];
 };
 
 // CONVERT DATA
@@ -41,4 +41,4 @@ _query = format["INSERT INTO loadouts (name, playerid, active, loadout_1, loadou
 
 // SEND TO CLIENT
 //[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP;
-[1,] remoteExecCall ["life_fnc_loadoutSendRequest",(owner _sender)];
+[] remoteExec ["life_fnc_loadoutSendRequest",(owner _sender)];

@@ -25,12 +25,12 @@ _result = [_query,2] call DB_fnc_queryHandler;
 // REQUEST GET => WORK WITH THE DATA AND SELECT
 if(typeName _result isEqualTo "STRING") exitWith {
 //[[],"life_fnc_loadoutInsertPlayer",_ownerID,false,true] spawn BIS_fnc_MP
-[1,_ownerID] remoteExecCall ["life_fnc_loadoutInsertPlayer",_ownerID];
+[] remoteExec ["life_fnc_loadoutInsertPlayer",_ownerID];
 };
 
 if(count _result isEqualTo 0) exitWith {
 //[[],"life_fnc_loadoutInsertPlayer",_ownerID,false,true] spawn BIS_fnc_MP
-[1,] remoteExecCall ["life_fnc_loadoutInsertPlayer",_ownerID];
+[] remoteExec ["life_fnc_loadoutInsertPlayer",_ownerID];
 };
 
 // SELECT DATA AND SEND TO CLIENT
@@ -61,4 +61,4 @@ _result set[7,_loadout];
 
 // SEND DATA TO CLIENT
 //[_result,"LOUT_fnc_loadoutGetData",_ownerID,false] spawn BIS_fnc_MP;
-[1, _result] remoteExecCall ["LOUT_fnc_loadoutGetData",_ownerID];
+[_result] remoteExec ["LOUT_fnc_loadoutGetData",_ownerID];
