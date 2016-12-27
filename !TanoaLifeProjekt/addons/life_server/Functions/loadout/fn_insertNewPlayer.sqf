@@ -5,7 +5,7 @@
 	Description:
 	INSERT Data to the database
 */
-private["_uid","_xp","_name","_side","_banned","_sender","_kills","_level","_result","_query"];
+private["_uid","_name","_sender","_result","_query"];
 
 // CONVERT DATA
 _name = 			[_this,0,"",[""]] call BIS_fnc_param;
@@ -22,8 +22,15 @@ _query = format["SELECT name, playerid FROM loadouts WHERE playerid='%1'",_uid];
 _result = [_query,2] call DB_fnc_queryHandler;
 
 // ERROR CHECKS 2
-if(typeName _result isEqualTo "STRING") exitWith {[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP};
-if(count _result != 0) exitWith {[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP};
+if(typeName _result isEqualTo "STRING") exitWith {
+//[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP
+[1,] remoteExecCall ["life_fnc_loadoutSendRequest",(owner _sender)];
+};
+
+if(count _result != 0) exitWith {
+//[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP
+[1,] remoteExecCall ["life_fnc_loadoutSendRequest",(owner _sender)];
+};
 
 // CONVERT DATA
 _name = [_name] call DB_fnc_mresString;
@@ -33,4 +40,5 @@ _query = format["INSERT INTO loadouts (name, playerid, active, loadout_1, loadou
 [_query,1] call DB_fnc_queryHandler;
 
 // SEND TO CLIENT
-[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP;
+//[[],"life_fnc_loadoutSendRequest",(owner _sender),false] spawn BIS_fnc_MP;
+[1,] remoteExecCall ["life_fnc_loadoutSendRequest",(owner _sender)];
