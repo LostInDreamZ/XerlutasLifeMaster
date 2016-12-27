@@ -12,4 +12,5 @@ _player = player;
 _pUID = (getPlayerUID player);
 
 // SEND DATA TO SERVER
-[[_pUID,_player],"LOUTS_fnc_loadoutHandler",false,false] call BIS_fnc_MP;
+//[[_pUID,_player],"LOUTS_fnc_loadoutHandler",false,false] call BIS_fnc_MP;
+[_pUID, _player] remoteExec ["LOUTS_fnc_loadoutHandler",2];

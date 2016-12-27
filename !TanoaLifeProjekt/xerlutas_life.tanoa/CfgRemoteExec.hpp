@@ -68,14 +68,9 @@ class CfgRemoteExec {
         F(TON_fnc_clientGetKey,CLIENT)
         F(TON_fnc_clientMessage,CLIENT)
         F(TON_fnc_player_query,CLIENT)
-		F(life_fnc_loadoutChange,CLIENT) //DynMarket
+		F(life_fnc_update,CLIENT) //DynMarket
 		///////////LoadoutSystem////////////
-		F(life_fnc_loadoutDeleteGear,CLIENT)
-		F(life_fnc_loadoutGetData,CLIENT)
-		F(life_fnc_LoadoutInit,CLIENT)
 		F(life_fnc_loadoutInsertPlayer,CLIENT)
-		F(life_fnc_loadoutList,CLIENT)
-		F(life_fnc_loadoutSave,CLIENT)
 		F(life_fnc_loadoutSendRequest,CLIENT)
 		F(life_fnc_loadoutUpdate,CLIENT)
 		F(life_fnc_loadoutWear,CLIENT)

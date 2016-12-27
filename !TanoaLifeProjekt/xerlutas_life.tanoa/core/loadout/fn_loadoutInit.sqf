@@ -41,8 +41,8 @@ _dropdownMenu lbSetCurSel 0;
 // BUTTON CONTROL 
 if(sd_loadoutSyncCooldown) then {
 	_buttonSaveGear ctrlEnable false;
-	_buttonSaveGear ctrlSetText "COOLDOWN";
+	_buttonSaveGear ctrlSetText "on Cooldown";
 } else {
 	_buttonSaveGear ctrlEnable true;
-	_buttonSaveGear ctrlSetText "SYNC TO SERVER";
+	_buttonSaveGear ctrlSetText "";
 };
