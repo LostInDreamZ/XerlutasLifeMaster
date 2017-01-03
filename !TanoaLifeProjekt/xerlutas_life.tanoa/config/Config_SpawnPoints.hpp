@@ -126,53 +126,69 @@ class CfgSpawnPoints {
     class Tanoa {
 
         class Civilian {
+			
+			//////////////////////First Spawns//////////////////////////////
+			class first_air {
+                displayName = "Flughafen";
+                spawnMarker = "first_air";
+                icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+                conditions = "!license_civ_perso";
+            };
+			class first_water {
+                displayName = "Hafen";
+                spawnMarker = "first_water";
+                icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+                conditions = "!license_civ_perso";
+            };
+			////////////////////////////////////////////////////////////////
+			
             class Georgetown {
                 displayName = "Georgetown";
                 spawnMarker = "civ_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-                conditions = "!license_civ_rebel";
+                conditions = "license_civ_perso";
             };
 
             class Balavu {
                 displayName = "Balavu";
                 spawnMarker = "civ_spawn_3";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-                conditions = "";
+                conditions = "license_civ_perso";
             };
 
             class Tuvanaka {
                 displayName = "Tuvanaka";
                 spawnMarker = "civ_spawn_2";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-                conditions = "";
+                conditions = "license_civ_perso";
             };
 
             class Lijnhaven {
                 displayName = "Lijnhaven";
                 spawnMarker = "civ_spawn_4";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-                conditions = "";
+                conditions = "license_civ_perso";
             };
 
             class RebelNW {
                 displayName = "North Western Rebel Base";
                 spawnMarker = "Rebelop";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "license_civ_rebel, license_civ_perso";
             };
 
             class RebelS {
                 displayName = "Southern Rebel Base";
                 spawnMarker = "Rebelop_1";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "license_civ_rebel, license_civ_perso";
             };
 
             class RebelNE {
                 displayName = "North Eastern Rebel Base";
                 spawnMarker = "Rebelop_2";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "license_civ_rebel, license_civ_perso";
             };
         };
 

@@ -7,6 +7,16 @@
 *        side = side indicator
 */
 class Licenses {
+	////////////////////////////////////Xerlutas Licenses//////////////////////////////////////
+	//ShowLicense
+	class perso {
+        variable = "perso";
+        displayName = "Personalausweis";
+        price = 0;
+        illegal = false;
+        side = "civ";
+    };
+	
     //Civilian Licenses
     class driver {
         variable = "driver";

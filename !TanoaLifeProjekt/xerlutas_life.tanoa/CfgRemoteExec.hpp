@@ -74,6 +74,8 @@ class CfgRemoteExec {
 		F(life_fnc_loadoutSendRequest,CLIENT)
 		F(life_fnc_loadoutUpdate,CLIENT)
 		F(life_fnc_loadoutWear,CLIENT)
+		F(life_fnc_licenseShown,CLIENT) //LicenseSystem
+		F(life_fnc_licenseShow,CLIENT) //LicenseSystem
 
         /* Server only functions */
         F(BIS_fnc_execVM,SERVER)
