@@ -21,7 +21,7 @@ switch(playerSide) do
 	case civilian:
 	{
 		ctrlEnable[2012,false];
-		ctrlEnable[1101,false];
+		ctrlShow [1101,false];
 	};
 	
 	case independent:
@@ -29,6 +29,7 @@ switch(playerSide) do
 		ctrlEnable[2011,false];
 		ctrlEnable[2016,false];
 		ctrlEnable[2012,false];
+		ctrlShow [1101,false];
 	};
 };
 

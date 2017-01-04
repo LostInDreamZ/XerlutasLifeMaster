@@ -17,7 +17,8 @@ if(sd_loadoutSyncCooldown) exitWith {};
 _packet = [(profileName),getPlayerUID player,(str sd_activeProfile),sd_loadout_1,sd_loadout_2,sd_loadout_3,sd_loadout_4,sd_loadout_5];
 
 // SEND PACKET TO SERVER 
-[_packet,"LOUTS_fnc_updateLoadouts",false,false] spawn BIS_fnc_MP;
+//[_packet,"LOUTS_fnc_updateLoadouts",false,false] spawn BIS_fnc_MP;
+[_packet] remoteExec ["LOUTS_fnc_updateLoadouts",2];
 
 sd_loadoutSyncCooldown = true;
 ((findDisplay 75000) displayCtrl 75002) ctrlEnable false;

@@ -23,8 +23,15 @@ _query = format["SELECT name, playerid, active, loadout_1, loadout_2, loadout_3,
 _result = [_query,2] call DB_fnc_queryHandler;
 
 // REQUEST GET => WORK WITH THE DATA AND SELECT
-if(typeName _result isEqualTo "STRING") exitWith {[[],"LOUT_fnc_loadoutInsertPlayer",_ownerID,false,true] spawn BIS_fnc_MP};
-if(count _result isEqualTo 0) exitWith {[[],"LOUT_fnc_loadoutInsertPlayer",_ownerID,false,true] spawn BIS_fnc_MP};
+if(typeName _result isEqualTo "STRING") exitWith {
+//[[],"life_fnc_loadoutInsertPlayer",_ownerID,false,true] spawn BIS_fnc_MP
+[] remoteExec ["life_fnc_loadoutInsertPlayer",_ownerID];
+};
+
+if(count _result isEqualTo 0) exitWith {
+//[[],"life_fnc_loadoutInsertPlayer",_ownerID,false,true] spawn BIS_fnc_MP
+[] remoteExec ["life_fnc_loadoutInsertPlayer",_ownerID];
+};
 
 // SELECT DATA AND SEND TO CLIENT
 private["_temp","_loadout"];
@@ -53,4 +60,5 @@ _result set[7,_loadout];
 
 
 // SEND DATA TO CLIENT
-[_result,"LOUT_fnc_loadoutGetData",_ownerID,false] spawn BIS_fnc_MP;
+//[_result,"LOUT_fnc_loadoutGetData",_ownerID,false] spawn BIS_fnc_MP;
+[_result] remoteExec ["LOUT_fnc_loadoutGetData",_ownerID];

@@ -67,7 +67,7 @@ class smartphoneopen {
             w = 0.035892 * safezoneW;
             h = 0.067412 * safezoneH;
         };
-        class Button_SMS: Life_RscButtonInvisible  //OK -> SQL Smartphoen folgt...
+        class Button_SMS: Life_RscButtonInvisible  //SQL Smartphone eingefügt
         {
             idc = 2014;
             text = "";

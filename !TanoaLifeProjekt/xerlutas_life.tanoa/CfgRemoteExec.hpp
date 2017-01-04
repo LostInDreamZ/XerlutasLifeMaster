@@ -68,6 +68,14 @@ class CfgRemoteExec {
         F(TON_fnc_clientGetKey,CLIENT)
         F(TON_fnc_clientMessage,CLIENT)
         F(TON_fnc_player_query,CLIENT)
+		F(life_fnc_update,CLIENT) //DynMarket
+		///////////LoadoutSystem////////////
+		F(life_fnc_loadoutInsertPlayer,CLIENT)
+		F(life_fnc_loadoutSendRequest,CLIENT)
+		F(life_fnc_loadoutUpdate,CLIENT)
+		F(life_fnc_loadoutWear,CLIENT)
+		F(life_fnc_licenseShown,CLIENT) //LicenseSystem
+		F(life_fnc_licenseShow,CLIENT) //LicenseSystem
 
         /* Server only functions */
         F(BIS_fnc_execVM,SERVER)
@@ -113,10 +121,12 @@ class CfgRemoteExec {
 		F(TON_fnc_playerLogged,SERVER) //DynMarket
 		F(TON_fnc_getUpdate,SERVER) //DynMarket
 		F(TON_fnc_changePrice, SERVER) //DynMarket
-		F(life_fnc_update,CLIENT) //DynMarket
 		F(TON_fnc_handleMessages,SERVER)//SQL Phone
 		F(TON_fnc_msgRequest,SERVER)//SQL Phone
 		F(TON_fnc_insureCar,SERVER) //Fahrzeug Versicherung
+		F(LOUTS_fnc_insertNewPlayer,SERVER) //loadout
+		F(LOUTS_fnc_loadoutHandler,SERVER) //loadout
+		F(LOUTS_fnc_updateLoadouts,SERVER) //loadout
 
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)

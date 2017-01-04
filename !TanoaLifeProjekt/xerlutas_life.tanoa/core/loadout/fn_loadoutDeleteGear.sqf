@@ -18,10 +18,10 @@ if(_index isEqualTo []) exitWith {};
 switch(_index) do {
 	case 0:
 	{
-		_deleteCurrentSlot = ["Do you want to clear the current loadout slot?","Clear Current Slot","Clear Slot","Close"] call BIS_fnc_guiMessage;
+		_deleteCurrentSlot = ["Möchtest du das ausgewählte Loadout löschen?","Lösche momentanes Loadout","Loadout gelöscht","Schließen"] call BIS_fnc_guiMessage;
 		if(_deleteCurrentSlot) then {
-			hintSilent "Current Loadout Slot cleared!";
-			if(sd_activeProfile isEqualTo -1) exitWith {hintSilent "Nothing selected!"};
+			hintSilent "Ausgewähltes Loadout gelöscht!";
+			if(sd_activeProfile isEqualTo -1) exitWith {hintSilent "Nichts ausgewählt!"};
 			if(sd_activeProfile isEqualTo 0) then {
     			sd_loadout_1 = [];
 			};
@@ -43,9 +43,9 @@ switch(_index) do {
 	};
 	case 1:
 	{
-		_deleteAll = ["Do you want to clear all your loadouts?","Clear All Slots","Clear Slots","Close"] call BIS_fnc_guiMessage;
+		_deleteAll = ["Möchtest du ALLE Loadouts löschen?","Lösche alle Loadouts","Loadouts gelöscht","Schließen"] call BIS_fnc_guiMessage;
 		if(_deleteAll) then {
-			hintSilent "All saved loadouts cleared!";
+			hintSilent "Alle Loadouts gelöscht!";
 			sd_loadout_1 = [];
 			sd_loadout_2 = [];
 			sd_loadout_3 = [];
@@ -55,5 +55,5 @@ switch(_index) do {
 			[] call life_fnc_loadoutInit;
 		};
 	};
-	default {hintSilent "Canceled"};
+	default {hintSilent "Abgebrochen!"};
 };
