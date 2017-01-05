@@ -1,10 +1,11 @@
+#include "..\..\script_macros.hpp"
 /*	
 	//////////////////Xerlutas Gaming Community//////////////////
 	File: fn_licenseShow.sqf
 	Author:???? edited by LostInDreamZ
 */
 if(isServer)exitWith{};
-private["_UID","_ziel", "_rang", "_marke", "_id", "_message","driverl","weaponl"];
+private["_UID","_ziel", "_rang", "_marke", "_message","_driverl","_weaponl"];
 
 
 if(vehicle player != player )exitWith{};
@@ -32,7 +33,7 @@ switch(playerSide)do{
 		case 12: { _rang = "Gefreiter"; };
 		default { _rank = "Error"; };
 		};
-	_marke = "<img size='8' image='\textures\licenses\marke_pol.paa'/> ";
+	_marke = "<img size='8' image='textures\licenses\marke_pol.paa'/> ";
 	
 	_message = format["<t size='1.5'>%1</t><br/><t size='1.25'>%2</t><br/><br/>%3", name player, _rang, _marke];
 	[_message, _UID] remoteExec ["life_fnc_licenseShown",_ziel];
@@ -46,7 +47,7 @@ switch(playerSide)do{
 		case 1: { _rang = "Helfer"; };
 		default { _rank = "Error";};
 		};
-	_marke = "<img size='8' image='\textures\licenses\marke_feu.paa'/> ";
+	_marke = "<img size='8' image='textures\licenses\marke_feu.paa'/> ";
 	
 	_message = format["<t size='1.5'>%1</t><br/><t size='1.25'>%2</t><br/><br/>%3", name player, _rang, _marke];
 	[_message, _UID] remoteExec ["life_fnc_licenseShown",_ziel];
@@ -63,19 +64,19 @@ switch(playerSide)do{
 		if (FETCH_CONST(life_adminlevel) > 4) then { _rang = "Bürger | Admin";}
 		else{_rang = "Bürger";};
 		
-		if(license_civ_perso) then { _marke = "<img size='8' image='\textures\licenses\marke_ziv.paa'/>"; }
+		if(license_civ_perso) then { _marke = "<img size='8' image='textures\licenses\marke_ziv.paa'/>"; }
 		else {_marke = "<br/>";};
 	
-		if(license_civ_driver && license_civ_pilot && license_civ_trucking) then {_driverl = "<img size='8' image='\textures\licenses\führer_xxx.paa'/> ";}
-		else if(license_civ_driver && license_civ_pilot && !license_civ_trucking) then {_driverl = "<img size='8' image='\textures\licenses\führer_xox.paa'/> ";}
-		else if(license_civ_driver && license_civ_trucking && !license_civ_pilot) then {_driverl = "<img size='8' image='\textures\licenses\führer_xxo.paa'/> ";}
-		else if(license_civ_pilot && license_civ_trucking && !license_civ_driver) then {_driverl = "<img size='8' image='\textures\licenses\führer_oxx.paa'/> ";}
-		else if(license_civ_pilot && !license_civ_trucking && !license_civ_driver ) then {_driverl = "<img size='8' image='\textures\licenses\führer_oox.paa'/> ";}
-		else if(license_civ_driver && !license_civ_trucking && !license_civ_pilot) then {_driverl = "<img size='8' image='\textures\licenses\führer_xoo.paa'/> ";}
-		else if(license_civ_trucking && !license_civ_driver && !license_civ_pilot) then {_driverl = "<img size='8' image='\textures\licenses\führer_oxo.paa'/> ";}
-		else {_driverl = "textures\licenses\führer_ooo";};
+		if(license_civ_driver && license_civ_pilot && license_civ_trucking) then {_driverl = "<img size='8' image='textures\licenses\führer_xxx.paa'/> ";};
+		if(license_civ_driver && license_civ_pilot && !license_civ_trucking) then {_driverl = "<img size='8' image='textures\licenses\führer_xox.paa'/> ";};
+		if(license_civ_driver && license_civ_trucking && !license_civ_pilot) then {_driverl = "<img size='8' image='textures\licenses\führer_xxo.paa'/> ";};
+		if(license_civ_pilot && license_civ_trucking && !license_civ_driver) then {_driverl = "<img size='8' image='textures\licenses\führer_oxx.paa'/> ";};
+		if(license_civ_pilot && !license_civ_trucking && !license_civ_driver) then {_driverl = "<img size='8' image='textures\licenses\führer_oox.paa'/> ";};
+		if(license_civ_driver && !license_civ_trucking && !license_civ_pilot) then {_driverl = "<img size='8' image='textures\licenses\führer_xoo.paa'/> ";};
+		if(license_civ_trucking && !license_civ_driver && !license_civ_pilot) then {_driverl = "<img size='8' image='textures\licenses\führer_oxo.paa'/> ";};
+		if(!license_civ_trucking && !license_civ_driver && !license_civ_pilot) then {_driverl = "<img size='8' image='textures\licenses\führer_ooo.paa'/> ";};
 		
-		if(license_civ_gun) then { _weaponl = "<img size='8' image='\textures\licenses\marke_waf.paa'/> "; }
+		if(license_civ_gun) then { _weaponl = "<img size='8' image='textures\licenses\marke_waf.paa'/> "; }
 		else {_weaponl = "<br/>";};
 		
 		
