@@ -18,7 +18,7 @@ _plist = _display displayCtrl 2702;
 lbClear _plist;
 _near_units = [];
 
-{ if (player distance _x < 20) then {_near_units pushBack _x};} forEach playableUnits;
+{ if (player distance _x < 6) then {_near_units pushBack _x};} forEach playableUnits;
 
 for "_i" from 0 to (count life_vehicles)-1 do {
     _veh = life_vehicles select _i;
@@ -41,9 +41,15 @@ for "_i" from 0 to (count life_vehicles)-1 do {
 };
 
 {
-    if (!isNull _x && alive _x && player distance _x < 20 && _x != player) then {
-        _plist lbAdd format ["%1 - %2",_x getVariable ["realname",name _x], side _x];
+    if (!isNull _x && alive _x && player distance _x < 6 && _x != player) then 
+	{
+		if(((getPlayerUID _x) in xer_licensesShown) OR (FETCH_CONST(life_adminlevel) > 1))then{
+			_plist lbAdd format ["%1 - %2",_x getVariable ["realname",name _x], side _x];
         _plist lbSetData [(lbSize _plist)-1,str(_x)];
+		}else{
+			_plist lbAdd format["xxxxxxx"];
+			_plist lbSetData [(lbSize _plist)-1,str(_x)];
+		};
     };
 } forEach _near_units;
 

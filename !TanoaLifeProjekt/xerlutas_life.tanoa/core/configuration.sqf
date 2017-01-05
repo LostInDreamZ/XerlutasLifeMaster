@@ -58,6 +58,9 @@ life_smartphoneTarget = ObjNull;
 __SVAR__(sd_loadoutMaster,TRUE);							// ENABLE THE LOADOUT SYSTEM 									DEFAULT: TRUE
 __SVAR__(sd_loadoutCooldown,180);							// SYNC COOLDOWN TIME IN SECONDS
 
+//Xerlutas
+xer_licensesShown = [];
+
 //Loadout
 sd_loadoutSyncCooldown 	= 	false;
 sd_loadoutLoad 			=	false;
