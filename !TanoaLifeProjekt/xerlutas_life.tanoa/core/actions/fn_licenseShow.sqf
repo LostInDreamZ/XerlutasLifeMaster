@@ -85,7 +85,7 @@ switch(playerSide)do{
 		_marke = "<br/>";
 		}; 
 		
-		_message = format["<t size='1.5'>%1</t><br/><t size='1.25'>%2</t><t size='1'>%3</t><br/>%4<br/>%5<br/>%6",name player,_rang,_UID,_marke,_driverl, _weaponl];
+		_message = format["<t size='1.5'>%1</t><br/><t size='1.25'>%2</t><br/><t size='1'>%3</t><br/>%4<br/>%5<br/>%6",name player,_rang,_UID,_marke,_driverl, _weaponl];
 		[_message, _UID] remoteExec ["life_fnc_licenseShown",_ziel];
 	};
 		

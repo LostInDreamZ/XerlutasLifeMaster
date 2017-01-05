@@ -61,8 +61,8 @@ class Life_Client_Core {
         class surrender {};
         class ticketAction {};
         class unrestrain {};
-		class fn_licenseShown {};
-		class fn_licenseShow {};
+		class licenseShown {};
+		class licenseShow {};
     };
 	
 	class DynMarket
