@@ -39,9 +39,17 @@ private _index = -1;
         _sPos = worldToScreen _pos;
         _distance = _pos distance player;
         if (!((headgear _x) in _masks || (goggles _x) in _masks || (uniform _x) in _masks)) then {
-            if (count _sPos > 1 && {_distance < 15}) then {
+            if (count _sPos > 1 && {_distance < 5}) then {
                 _text = switch (true) do {
-                    case (_x in (units group player) && playerSide isEqualTo civilian): {format ["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
+                    case (_x in (units group player) && playerSide isEqualTo civilian):
+					{	
+						if((getPlayerUID _x) in xer_licensesShown) then {
+							format ["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];
+						}else{
+							format [""];
+						};
+			
+					};
                     case (side _x isEqualTo west && {!isNil {_x getVariable "rank"}}): {format ["<img image='%1' size='1'></img> %2",switch ((_x getVariable "rank")) do {
                         case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"};
                         case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};

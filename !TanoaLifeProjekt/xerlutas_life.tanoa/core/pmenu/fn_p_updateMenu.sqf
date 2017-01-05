@@ -37,7 +37,7 @@ _near_units = [];
 	{	
 		if(((getPlayerUID _x) in xer_licensesShown) OR (FETCH_CONST(life_adminlevel) > 1))then{
 			_near lbAdd format ["%1 - %2",_x getVariable ["realname",name _x], side _x];
-        _near lbSetData [(lbSize _near)-1,str(_x)];
+			_near lbSetData [(lbSize _near)-1,str(_x)];
 		}else{
 			_near lbAdd format["xxxxxxx"];
 			_near lbSetData [(lbSize _near)-1,str(_x)];
