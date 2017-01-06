@@ -22,9 +22,6 @@
 #include "FuelStat.hpp"
 #include "newsStation.hpp"
 
-//Crafting
-#include "craft.hpp"
-
 //Smartphone Xerlutas 
 #include "smartphone_open.hpp"
 #include "settings.hpp"

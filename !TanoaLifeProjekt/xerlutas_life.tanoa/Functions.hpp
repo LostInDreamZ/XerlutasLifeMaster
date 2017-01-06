@@ -63,7 +63,6 @@ class Life_Client_Core {
         class unrestrain {};
 		class licenseShown {};
 		class licenseShow {};
-		class craftAction {};
     };
 	
 	class DynMarket
@@ -117,7 +116,6 @@ class Life_Client_Core {
         class itemWeight {};
         class vehicleAnimate {};
         class vehicleWeightCfg {};
-		class craftCfg {};
     };
 
     class Cop {
@@ -190,14 +188,6 @@ class Life_Client_Core {
         class loadoutList {};
         class loadoutChange {};
         class loadoutDeleteGear {};
-    };
-	
-	class Loadout {
-        file = "core\helicopter";
-		class craft {};
-		class craft_update {};
-		class craft_updateFilter {};
-        
     };
 
     class Functions {
