@@ -142,8 +142,98 @@ class VirtualShops {
 *        processedItem = Processed Item
 */
 class VirtualItems {
-    //Virtual Items
-
+    //////////////////////////Virtual Items//////////////////////////////
+	///////////////////////HelicopterCraftingP1////////////////////////////
+	class  dTrans{
+        variable = "dTrans";
+        displayName = "Defektes Getriebe";
+        weight = 10;
+        buyPrice = -1;
+        sellPrice = -1;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+	
+	class  dEngine{
+        variable = "dEngine";
+        displayName = "Defekter Motor";
+        weight = 10;
+        buyPrice = -1;
+        sellPrice = -1;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+	
+	class  dElec{
+        variable = "dElec";
+        displayName = "Defekte Elektronik";
+        weight = 10;
+        buyPrice = -1;
+        sellPrice = -1;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+	
+	class  dCover{
+        variable = "dCover";
+        displayName = "Defekte Anbauteile";
+        weight = 10;
+        buyPrice = -1;
+        sellPrice = -1;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+	//////////////////////////HelicopterCraftingP2////////////////////////////
+	class  Trans{
+        variable = "Trans";
+        displayName = "Helikopter Getriebe";
+        weight = 2;
+        buyPrice = -1;
+        sellPrice = 0;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+	
+	class  Engine{
+        variable = "Engine";
+        displayName = "Helikopter Motor";
+        weight = 2;
+        buyPrice = -1;
+        sellPrice = 0;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+	
+	class  Elec{
+        variable = "Elec";
+        displayName = "Helikopter Elektronik";
+        weight = 2;
+        buyPrice = -1;
+        sellPrice = 0;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+	
+	class  Cover{
+        variable = "Cover";
+        displayName = "Helikopter Anbauteile";
+        weight = 2;
+        buyPrice = -1;
+        sellPrice = 0;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+	////////////////////////////////////////////////////////////
+	
+	
     //Misc
     class pickaxe {
         variable = "pickaxe";

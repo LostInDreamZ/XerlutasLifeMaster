@@ -17,6 +17,37 @@
 */
 
 class ProcessAction {
+	////////////////////HelikopterCraft////////////////
+	 class Trans {
+        MaterialsReq[] = {{"dTrans",5}};
+        MaterialsGive[] = {{"Trans",1}};
+        Text = "Getriebe herstellen";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 0;
+    };
+	 class Engine {
+        MaterialsReq[] = {{"dEngine",5}};
+        MaterialsGive[] = {{"Engine",1}};
+        Text = "Motor herstellen";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 0;
+    };
+	 class Elec {
+        MaterialsReq[] = {{"dElec",5}};
+        MaterialsGive[] = {{"Elec",1}};
+        Text = "Elektronikteile herstellen";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 0;
+    };
+	 class Cover {
+        MaterialsReq[] = {{"dCover",5}};
+        MaterialsGive[] = {{"Cover",1}};
+        Text = "Anbauteile herstellen";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 0;
+    };
+	///////////////////////////////////////////////////////////
+	
     class oil {
         MaterialsReq[] = {{"oil_unprocessed",1}};
         MaterialsGive[] = {{"oil_processed",1}};
