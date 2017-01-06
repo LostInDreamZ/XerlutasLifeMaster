@@ -83,4 +83,4 @@ if(_rip) then {
 //Reset Shop 
 _shop switchMove "";
 sleep 300;
-_action = _shop addAction["Tankstelle ausrauben",life_fnc_robstore];
+_action = _shop addAction["Tankstelle ausrauben",life_fnc_robShops];
