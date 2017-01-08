@@ -175,7 +175,6 @@ class Life_Client_Core {
         class vehicleGarage {};
         class wireTransfer {};
 		class insureCar {}; //Fahrzeug Versicherung
-		class robShops {}; //RobbingShops
     };
 	
 	class Loadout {
@@ -249,6 +248,7 @@ class Life_Client_Core {
         class teleport {};
         class whereAmI {};
 		class mArrayToSArray {};
+		class robShops {}; //RobbingShops
     };
 	
 	class XerlutasSmartphone {
