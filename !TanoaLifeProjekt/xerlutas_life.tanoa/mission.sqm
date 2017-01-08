@@ -150708,7 +150708,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""Schilder\feuer.jpg""];";
+				init="";
 				disableSimulation=1;
 			};
 			id=9923;
@@ -150750,7 +150750,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""Schilder\feuer.jpg""];";
+				init="";
 				disableSimulation=1;
 			};
 			id=9929;
@@ -150792,7 +150792,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0, ""Schilder\feuer.jpg""];";
+				init="";
 			};
 			id=9930;
 			type="Land_Billboard_F";
