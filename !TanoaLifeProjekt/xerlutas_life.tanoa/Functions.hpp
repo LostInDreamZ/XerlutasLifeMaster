@@ -191,12 +191,11 @@ class Life_Client_Core {
         class loadoutDeleteGear {};
     };
 	
-	class Loadout {
+	class helicopter {
         file = "core\helicopter";
 		class craft {};
 		class craft_update {};
-		class craft_updateFilter {};
-        
+		class craft_updateFilter {};   
     };
 
     class Functions {
