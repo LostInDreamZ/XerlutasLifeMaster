@@ -6537,4 +6537,30 @@
 		<Original>Nutruf absetzten</Original>
 	</Key>
   </Package>
+  <Package name="RevokeLicenses">
+	<Key ID="STR_pInAct_RevokeLicense">
+		<Orignal>Lizenzen entziehen</Orignal>
+	</Key>
+	<Key ID="STR_Civ_RevokeLicense_Driver">
+		<Original>Dein Führerschein wurde von der Polizei beschlagnahmt!</Original>
+	</Key>
+	<Key ID="STR_Civ_RevokeLicense_Truck">
+		<Original>Dein LKW Führerschein wurde von der Polizei beschlagnahmt!</Original>
+	</Key>
+	<Key ID="STR_Civ_RevokeLicense_Pilot">
+		<Original>Dein Flugschein wurde von der Polizei beschlagnahmt!</Original>
+	</Key>
+	<Key ID="STR_Civ_RevokeLicense_Boating">
+		<Original>Dein Bootsschein wurde von der Polizei beschlagnahmt!</Original>
+	</Key>
+	<Key ID="STR_Civ_RevokeLicense_ausweis">
+		<Original>Dein Ausweis wurde von der Polizei beschlagnahmt!</Original>
+	</Key>
+	<Key ID="STR_Civ_RevokeLicense_Wap">
+		<Original>Dein Waffenschein wurde von der Polizei beschlagnahmt!</Original>
+	</Key>
+	<Key ID="STR_Civ_RevokeLicense_AllMotor">
+		<Original>Alle deine Fahrlizenzen wurde von der Polizei beschlagnahmt!</Original>
+	</Key>
+  </Package>
 </Project>

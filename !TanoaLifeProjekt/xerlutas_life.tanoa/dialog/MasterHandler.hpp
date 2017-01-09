@@ -22,6 +22,10 @@
 #include "FuelStat.hpp"
 #include "newsStation.hpp"
 
+
+//Remove Licenses Police
+#include "revoke_license.hpp"
+
 //Crafting
 #include "craft.hpp"
 

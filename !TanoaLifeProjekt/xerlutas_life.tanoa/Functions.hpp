@@ -365,6 +365,8 @@ class Life_Client_Core {
 		class smartphone {};
 		class newMsg {};
 		class showMsg {};
+		//LicensesRemoveCop
+		class revokeLicense {};
     };
 
     class Shops {
