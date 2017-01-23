@@ -24,7 +24,9 @@ private "_rentMultiplier";
 
 switch (playerSide) do {
     case civilian: {
-        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_CIVILIAN");
+		 if (missionNamespace getVariable LICENSE_VARNAME("helib","civ") then {
+			_buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_helilicense");
+			} else {_buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_CIVILIAN");};
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_CIVILIAN");
     };
     case west: {
