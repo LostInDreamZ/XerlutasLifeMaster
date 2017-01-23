@@ -18,6 +18,13 @@
 
 class ProcessAction {
 	////////////////////HelikopterCraft////////////////
+	 class blueprinth {
+        MaterialsReq[] = {{"Trans",5}, {"Engine",5}, {"Elec",5}, {{"Cover",5}};
+        MaterialsGive[] = {{"blueprinth",1}};
+        Text = "Heli-Wertschein herstellen";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 0;
+    };
 	 class Trans {
         MaterialsReq[] = {{"dTrans",5}};
         MaterialsGive[] = {{"Trans",1}};

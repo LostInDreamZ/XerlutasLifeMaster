@@ -190,13 +190,6 @@ class Life_Client_Core {
         class loadoutChange {};
         class loadoutDeleteGear {};
     };
-	
-	class helicopter {
-        file = "core\helicopter";
-		class craft {};
-		class craft_update {};
-		class craft_updateFilter {};   
-    };
 
     class Functions {
         file = "core\functions";
@@ -307,6 +300,7 @@ class Life_Client_Core {
         class placestorage {};
         class spikeStrip {};
         class storageBox {};
+		class heliLicense {};
     };
 
     class Medical_System {

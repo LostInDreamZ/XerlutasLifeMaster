@@ -90,6 +90,10 @@ switch (true) do {
             };
         };
     };
+	
+	case (_item isEqualTo "blueprinth"): {
+        [] spawn life_fnc_heliLicense;
+    };
 
     default {
         hint localize "STR_ISTR_NotUsable";

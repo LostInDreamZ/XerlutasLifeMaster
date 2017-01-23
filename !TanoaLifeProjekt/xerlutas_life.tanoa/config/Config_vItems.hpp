@@ -143,6 +143,17 @@ class VirtualShops {
 */
 class VirtualItems {
     //////////////////////////Virtual Items//////////////////////////////
+	///////////////////////HelicopterCrafting////////////////////////////
+	class  blueprinth{
+        variable = "blueprinth";
+        displayName = "Heli-Wertschein verpackt";
+        weight = 1;
+        buyPrice = -1;
+        sellPrice = -1;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
 	///////////////////////HelicopterCraftingP1////////////////////////////
 	class  dTrans{
         variable = "dTrans";

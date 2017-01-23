@@ -26,9 +26,6 @@
 //Remove Licenses Police
 #include "revoke_license.hpp"
 
-//Crafting
-#include "craft.hpp"
-
 //Smartphone Xerlutas 
 #include "smartphone_open.hpp"
 #include "settings.hpp"

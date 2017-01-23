@@ -8,6 +8,14 @@
 */
 class Licenses {
 	////////////////////////////////////Xerlutas Licenses//////////////////////////////////////
+	//Heli-Buy-License
+	class helib {
+        variable = "helib";
+        displayName = "Heli-Wertschein";
+        price = 0;
+        illegal = false;
+        side = "civ";
+    };
 	//ShowLicense
 	class perso {
         variable = "perso";
